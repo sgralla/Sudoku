@@ -2,7 +2,7 @@
 using System.Globalization;
 using System.Windows.Forms;
 
-public class NumericTextBox : RichTextBox
+public class SingleDigitCenteredTextBox : RichTextBox
 {
     bool allowSpace = false;
 
@@ -19,6 +19,7 @@ public class NumericTextBox : RichTextBox
 
         string keyInput = e.KeyChar.ToString();
 
+        /* Default Function
         if (Char.IsDigit(e.KeyChar))
         {
             // Digits are OK
@@ -46,6 +47,16 @@ public class NumericTextBox : RichTextBox
             e.Handled = true;
             //    MessageBeep();
         }
+        */
+        if (!Char.IsDigit(e.KeyChar))
+        {
+            e.Handled = true;
+        }
+
+        // Set to Center
+        SelectAll();
+        SelectionAlignment = HorizontalAlignment.Center;
+
     }
 
     public int IntValue
