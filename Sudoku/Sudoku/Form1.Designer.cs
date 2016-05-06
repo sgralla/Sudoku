@@ -31,60 +31,6 @@ namespace Sudoku
         /// </summary>
         private void InitializeComponent()
         {
-            this.sdc33 = new SingleDigitCenteredTextBox();
-            this.sdc32 = new SingleDigitCenteredTextBox();
-            this.sdc31 = new SingleDigitCenteredTextBox();
-            this.sdc23 = new SingleDigitCenteredTextBox();
-            this.sdc22 = new SingleDigitCenteredTextBox();
-            this.sdc21 = new SingleDigitCenteredTextBox();
-            this.sdc13 = new SingleDigitCenteredTextBox();
-            this.sdc12 = new SingleDigitCenteredTextBox();
-            this.sdc11 = new SingleDigitCenteredTextBox();
-            this.sdc63 = new SingleDigitCenteredTextBox();
-            this.sdc62 = new SingleDigitCenteredTextBox();
-            this.sdc61 = new SingleDigitCenteredTextBox();
-            this.sdc53 = new SingleDigitCenteredTextBox();
-            this.sdc52 = new SingleDigitCenteredTextBox();
-            this.sdc51 = new SingleDigitCenteredTextBox();
-            this.sdc43 = new SingleDigitCenteredTextBox();
-            this.sdc42 = new SingleDigitCenteredTextBox();
-            this.sdc41 = new SingleDigitCenteredTextBox();
-            this.sdc93 = new SingleDigitCenteredTextBox();
-            this.sdc92 = new SingleDigitCenteredTextBox();
-            this.sdc91 = new SingleDigitCenteredTextBox();
-            this.sdc83 = new SingleDigitCenteredTextBox();
-            this.sdc82 = new SingleDigitCenteredTextBox();
-            this.sdc81 = new SingleDigitCenteredTextBox();
-            this.sdc73 = new SingleDigitCenteredTextBox();
-            this.sdc72 = new SingleDigitCenteredTextBox();
-            this.sdc71 = new SingleDigitCenteredTextBox();
-            this.sdc96 = new SingleDigitCenteredTextBox();
-            this.sdc95 = new SingleDigitCenteredTextBox();
-            this.sdc94 = new SingleDigitCenteredTextBox();
-            this.sdc86 = new SingleDigitCenteredTextBox();
-            this.sdc85 = new SingleDigitCenteredTextBox();
-            this.sdc84 = new SingleDigitCenteredTextBox();
-            this.sdc76 = new SingleDigitCenteredTextBox();
-            this.sdc75 = new SingleDigitCenteredTextBox();
-            this.sdc74 = new SingleDigitCenteredTextBox();
-            this.sdc66 = new SingleDigitCenteredTextBox();
-            this.sdc65 = new SingleDigitCenteredTextBox();
-            this.sdc64 = new SingleDigitCenteredTextBox();
-            this.sdc56 = new SingleDigitCenteredTextBox();
-            this.sdc55 = new SingleDigitCenteredTextBox();
-            this.sdc54 = new SingleDigitCenteredTextBox();
-            this.sdc46 = new SingleDigitCenteredTextBox();
-            this.sdc45 = new SingleDigitCenteredTextBox();
-            this.sdc44 = new SingleDigitCenteredTextBox();
-            this.sdc36 = new SingleDigitCenteredTextBox();
-            this.sdc35 = new SingleDigitCenteredTextBox();
-            this.sdc34 = new SingleDigitCenteredTextBox();
-            this.sdc26 = new SingleDigitCenteredTextBox();
-            this.sdc25 = new SingleDigitCenteredTextBox();
-            this.sdc24 = new SingleDigitCenteredTextBox();
-            this.sdc16 = new SingleDigitCenteredTextBox();
-            this.sdc15 = new SingleDigitCenteredTextBox();
-            this.sdc14 = new SingleDigitCenteredTextBox();
             this.sdc99 = new SingleDigitCenteredTextBox();
             this.sdc98 = new SingleDigitCenteredTextBox();
             this.sdc97 = new SingleDigitCenteredTextBox();
@@ -112,709 +58,62 @@ namespace Sudoku
             this.sdc19 = new SingleDigitCenteredTextBox();
             this.sdc18 = new SingleDigitCenteredTextBox();
             this.sdc17 = new SingleDigitCenteredTextBox();
+            this.sdc96 = new SingleDigitCenteredTextBox();
+            this.sdc95 = new SingleDigitCenteredTextBox();
+            this.sdc94 = new SingleDigitCenteredTextBox();
+            this.sdc86 = new SingleDigitCenteredTextBox();
+            this.sdc85 = new SingleDigitCenteredTextBox();
+            this.sdc84 = new SingleDigitCenteredTextBox();
+            this.sdc76 = new SingleDigitCenteredTextBox();
+            this.sdc75 = new SingleDigitCenteredTextBox();
+            this.sdc74 = new SingleDigitCenteredTextBox();
+            this.sdc66 = new SingleDigitCenteredTextBox();
+            this.sdc65 = new SingleDigitCenteredTextBox();
+            this.sdc64 = new SingleDigitCenteredTextBox();
+            this.sdc56 = new SingleDigitCenteredTextBox();
+            this.sdc55 = new SingleDigitCenteredTextBox();
+            this.sdc54 = new SingleDigitCenteredTextBox();
+            this.sdc46 = new SingleDigitCenteredTextBox();
+            this.sdc45 = new SingleDigitCenteredTextBox();
+            this.sdc44 = new SingleDigitCenteredTextBox();
+            this.sdc36 = new SingleDigitCenteredTextBox();
+            this.sdc35 = new SingleDigitCenteredTextBox();
+            this.sdc34 = new SingleDigitCenteredTextBox();
+            this.sdc26 = new SingleDigitCenteredTextBox();
+            this.sdc25 = new SingleDigitCenteredTextBox();
+            this.sdc24 = new SingleDigitCenteredTextBox();
+            this.sdc16 = new SingleDigitCenteredTextBox();
+            this.sdc15 = new SingleDigitCenteredTextBox();
+            this.sdc14 = new SingleDigitCenteredTextBox();
+            this.sdc93 = new SingleDigitCenteredTextBox();
+            this.sdc92 = new SingleDigitCenteredTextBox();
+            this.sdc91 = new SingleDigitCenteredTextBox();
+            this.sdc83 = new SingleDigitCenteredTextBox();
+            this.sdc82 = new SingleDigitCenteredTextBox();
+            this.sdc81 = new SingleDigitCenteredTextBox();
+            this.sdc73 = new SingleDigitCenteredTextBox();
+            this.sdc72 = new SingleDigitCenteredTextBox();
+            this.sdc71 = new SingleDigitCenteredTextBox();
+            this.sdc63 = new SingleDigitCenteredTextBox();
+            this.sdc62 = new SingleDigitCenteredTextBox();
+            this.sdc61 = new SingleDigitCenteredTextBox();
+            this.sdc53 = new SingleDigitCenteredTextBox();
+            this.sdc52 = new SingleDigitCenteredTextBox();
+            this.sdc51 = new SingleDigitCenteredTextBox();
+            this.sdc43 = new SingleDigitCenteredTextBox();
+            this.sdc42 = new SingleDigitCenteredTextBox();
+            this.sdc41 = new SingleDigitCenteredTextBox();
+            this.sdc33 = new SingleDigitCenteredTextBox();
+            this.sdc32 = new SingleDigitCenteredTextBox();
+            this.sdc31 = new SingleDigitCenteredTextBox();
+            this.sdc23 = new SingleDigitCenteredTextBox();
+            this.sdc22 = new SingleDigitCenteredTextBox();
+            this.sdc21 = new SingleDigitCenteredTextBox();
+            this.sdc13 = new SingleDigitCenteredTextBox();
+            this.sdc12 = new SingleDigitCenteredTextBox();
+            this.sdc11 = new SingleDigitCenteredTextBox();
+            this.GameMessageBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // sdc33
-            // 
-            this.sdc33.AllowSpace = false;
-            this.sdc33.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc33.Location = new System.Drawing.Point(84, 84);
-            this.sdc33.MaxLength = 1;
-            this.sdc33.Multiline = false;
-            this.sdc33.Name = "sdc33";
-            this.sdc33.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc33.Size = new System.Drawing.Size(30, 30);
-            this.sdc33.TabIndex = 8;
-            this.sdc33.Text = "";
-            // 
-            // sdc32
-            // 
-            this.sdc32.AllowSpace = false;
-            this.sdc32.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc32.Location = new System.Drawing.Point(48, 84);
-            this.sdc32.MaxLength = 1;
-            this.sdc32.Multiline = false;
-            this.sdc32.Name = "sdc32";
-            this.sdc32.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc32.Size = new System.Drawing.Size(30, 30);
-            this.sdc32.TabIndex = 7;
-            this.sdc32.Text = "";
-            // 
-            // sdc31
-            // 
-            this.sdc31.AllowSpace = false;
-            this.sdc31.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc31.Location = new System.Drawing.Point(12, 84);
-            this.sdc31.MaxLength = 1;
-            this.sdc31.Multiline = false;
-            this.sdc31.Name = "sdc31";
-            this.sdc31.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc31.Size = new System.Drawing.Size(30, 30);
-            this.sdc31.TabIndex = 6;
-            this.sdc31.Text = "";
-            // 
-            // sdc23
-            // 
-            this.sdc23.AllowSpace = false;
-            this.sdc23.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc23.Location = new System.Drawing.Point(84, 48);
-            this.sdc23.MaxLength = 1;
-            this.sdc23.Multiline = false;
-            this.sdc23.Name = "sdc23";
-            this.sdc23.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc23.Size = new System.Drawing.Size(30, 30);
-            this.sdc23.TabIndex = 5;
-            this.sdc23.Text = "";
-            // 
-            // sdc22
-            // 
-            this.sdc22.AllowSpace = false;
-            this.sdc22.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc22.Location = new System.Drawing.Point(48, 48);
-            this.sdc22.MaxLength = 1;
-            this.sdc22.Multiline = false;
-            this.sdc22.Name = "sdc22";
-            this.sdc22.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc22.Size = new System.Drawing.Size(30, 30);
-            this.sdc22.TabIndex = 4;
-            this.sdc22.Text = "";
-            // 
-            // sdc21
-            // 
-            this.sdc21.AllowSpace = false;
-            this.sdc21.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc21.Location = new System.Drawing.Point(12, 48);
-            this.sdc21.MaxLength = 1;
-            this.sdc21.Multiline = false;
-            this.sdc21.Name = "sdc21";
-            this.sdc21.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc21.Size = new System.Drawing.Size(30, 30);
-            this.sdc21.TabIndex = 3;
-            this.sdc21.Text = "";
-            // 
-            // sdc13
-            // 
-            this.sdc13.AllowSpace = false;
-            this.sdc13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc13.Location = new System.Drawing.Point(84, 12);
-            this.sdc13.MaxLength = 1;
-            this.sdc13.Multiline = false;
-            this.sdc13.Name = "sdc13";
-            this.sdc13.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc13.Size = new System.Drawing.Size(30, 30);
-            this.sdc13.TabIndex = 2;
-            this.sdc13.Text = "";
-            // 
-            // sdc12
-            // 
-            this.sdc12.AllowSpace = false;
-            this.sdc12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc12.Location = new System.Drawing.Point(48, 12);
-            this.sdc12.MaxLength = 1;
-            this.sdc12.Multiline = false;
-            this.sdc12.Name = "sdc12";
-            this.sdc12.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc12.Size = new System.Drawing.Size(30, 30);
-            this.sdc12.TabIndex = 1;
-            this.sdc12.Text = "";
-            // 
-            // sdc11
-            // 
-            this.sdc11.AllowSpace = false;
-            this.sdc11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc11.Location = new System.Drawing.Point(12, 12);
-            this.sdc11.MaxLength = 1;
-            this.sdc11.Multiline = false;
-            this.sdc11.Name = "sdc11";
-            this.sdc11.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc11.Size = new System.Drawing.Size(30, 30);
-            this.sdc11.TabIndex = 0;
-            this.sdc11.Text = "";
-            // 
-            // sdc63
-            // 
-            this.sdc63.AllowSpace = false;
-            this.sdc63.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc63.Location = new System.Drawing.Point(84, 200);
-            this.sdc63.MaxLength = 1;
-            this.sdc63.Multiline = false;
-            this.sdc63.Name = "sdc63";
-            this.sdc63.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc63.Size = new System.Drawing.Size(30, 30);
-            this.sdc63.TabIndex = 17;
-            this.sdc63.Text = "";
-            // 
-            // sdc62
-            // 
-            this.sdc62.AllowSpace = false;
-            this.sdc62.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc62.Location = new System.Drawing.Point(48, 200);
-            this.sdc62.MaxLength = 1;
-            this.sdc62.Multiline = false;
-            this.sdc62.Name = "sdc62";
-            this.sdc62.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc62.Size = new System.Drawing.Size(30, 30);
-            this.sdc62.TabIndex = 16;
-            this.sdc62.Text = "";
-            // 
-            // sdc61
-            // 
-            this.sdc61.AllowSpace = false;
-            this.sdc61.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc61.Location = new System.Drawing.Point(12, 200);
-            this.sdc61.MaxLength = 1;
-            this.sdc61.Multiline = false;
-            this.sdc61.Name = "sdc61";
-            this.sdc61.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc61.Size = new System.Drawing.Size(30, 30);
-            this.sdc61.TabIndex = 15;
-            this.sdc61.Text = "";
-            // 
-            // sdc53
-            // 
-            this.sdc53.AllowSpace = false;
-            this.sdc53.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc53.Location = new System.Drawing.Point(84, 164);
-            this.sdc53.MaxLength = 1;
-            this.sdc53.Multiline = false;
-            this.sdc53.Name = "sdc53";
-            this.sdc53.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc53.Size = new System.Drawing.Size(30, 30);
-            this.sdc53.TabIndex = 14;
-            this.sdc53.Text = "";
-            // 
-            // sdc52
-            // 
-            this.sdc52.AllowSpace = false;
-            this.sdc52.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc52.Location = new System.Drawing.Point(48, 164);
-            this.sdc52.MaxLength = 1;
-            this.sdc52.Multiline = false;
-            this.sdc52.Name = "sdc52";
-            this.sdc52.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc52.Size = new System.Drawing.Size(30, 30);
-            this.sdc52.TabIndex = 13;
-            this.sdc52.Text = "";
-            // 
-            // sdc51
-            // 
-            this.sdc51.AllowSpace = false;
-            this.sdc51.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc51.Location = new System.Drawing.Point(12, 164);
-            this.sdc51.MaxLength = 1;
-            this.sdc51.Multiline = false;
-            this.sdc51.Name = "sdc51";
-            this.sdc51.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc51.Size = new System.Drawing.Size(30, 30);
-            this.sdc51.TabIndex = 12;
-            this.sdc51.Text = "";
-            // 
-            // sdc43
-            // 
-            this.sdc43.AllowSpace = false;
-            this.sdc43.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc43.Location = new System.Drawing.Point(84, 128);
-            this.sdc43.MaxLength = 1;
-            this.sdc43.Multiline = false;
-            this.sdc43.Name = "sdc43";
-            this.sdc43.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc43.Size = new System.Drawing.Size(30, 30);
-            this.sdc43.TabIndex = 11;
-            this.sdc43.Text = "";
-            // 
-            // sdc42
-            // 
-            this.sdc42.AllowSpace = false;
-            this.sdc42.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc42.Location = new System.Drawing.Point(48, 128);
-            this.sdc42.MaxLength = 1;
-            this.sdc42.Multiline = false;
-            this.sdc42.Name = "sdc42";
-            this.sdc42.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc42.Size = new System.Drawing.Size(30, 30);
-            this.sdc42.TabIndex = 10;
-            this.sdc42.Text = "";
-            // 
-            // sdc41
-            // 
-            this.sdc41.AllowSpace = false;
-            this.sdc41.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc41.Location = new System.Drawing.Point(12, 128);
-            this.sdc41.MaxLength = 1;
-            this.sdc41.Multiline = false;
-            this.sdc41.Name = "sdc41";
-            this.sdc41.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc41.Size = new System.Drawing.Size(30, 30);
-            this.sdc41.TabIndex = 9;
-            this.sdc41.Text = "";
-            // 
-            // sdc93
-            // 
-            this.sdc93.AllowSpace = false;
-            this.sdc93.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc93.Location = new System.Drawing.Point(84, 316);
-            this.sdc93.MaxLength = 1;
-            this.sdc93.Multiline = false;
-            this.sdc93.Name = "sdc93";
-            this.sdc93.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc93.Size = new System.Drawing.Size(30, 30);
-            this.sdc93.TabIndex = 26;
-            this.sdc93.Text = "";
-            // 
-            // sdc92
-            // 
-            this.sdc92.AllowSpace = false;
-            this.sdc92.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc92.Location = new System.Drawing.Point(48, 316);
-            this.sdc92.MaxLength = 1;
-            this.sdc92.Multiline = false;
-            this.sdc92.Name = "sdc92";
-            this.sdc92.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc92.Size = new System.Drawing.Size(30, 30);
-            this.sdc92.TabIndex = 25;
-            this.sdc92.Text = "";
-            // 
-            // sdc91
-            // 
-            this.sdc91.AllowSpace = false;
-            this.sdc91.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc91.Location = new System.Drawing.Point(12, 316);
-            this.sdc91.MaxLength = 1;
-            this.sdc91.Multiline = false;
-            this.sdc91.Name = "sdc91";
-            this.sdc91.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc91.Size = new System.Drawing.Size(30, 30);
-            this.sdc91.TabIndex = 24;
-            this.sdc91.Text = "";
-            // 
-            // sdc83
-            // 
-            this.sdc83.AllowSpace = false;
-            this.sdc83.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc83.Location = new System.Drawing.Point(84, 280);
-            this.sdc83.MaxLength = 1;
-            this.sdc83.Multiline = false;
-            this.sdc83.Name = "sdc83";
-            this.sdc83.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc83.Size = new System.Drawing.Size(30, 30);
-            this.sdc83.TabIndex = 23;
-            this.sdc83.Text = "";
-            // 
-            // sdc82
-            // 
-            this.sdc82.AllowSpace = false;
-            this.sdc82.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc82.Location = new System.Drawing.Point(48, 280);
-            this.sdc82.MaxLength = 1;
-            this.sdc82.Multiline = false;
-            this.sdc82.Name = "sdc82";
-            this.sdc82.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc82.Size = new System.Drawing.Size(30, 30);
-            this.sdc82.TabIndex = 22;
-            this.sdc82.Text = "";
-            // 
-            // sdc81
-            // 
-            this.sdc81.AllowSpace = false;
-            this.sdc81.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc81.Location = new System.Drawing.Point(12, 280);
-            this.sdc81.MaxLength = 1;
-            this.sdc81.Multiline = false;
-            this.sdc81.Name = "sdc81";
-            this.sdc81.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc81.Size = new System.Drawing.Size(30, 30);
-            this.sdc81.TabIndex = 21;
-            this.sdc81.Text = "";
-            // 
-            // sdc73
-            // 
-            this.sdc73.AllowSpace = false;
-            this.sdc73.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc73.Location = new System.Drawing.Point(84, 244);
-            this.sdc73.MaxLength = 1;
-            this.sdc73.Multiline = false;
-            this.sdc73.Name = "sdc73";
-            this.sdc73.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc73.Size = new System.Drawing.Size(30, 30);
-            this.sdc73.TabIndex = 20;
-            this.sdc73.Text = "";
-            // 
-            // sdc72
-            // 
-            this.sdc72.AllowSpace = false;
-            this.sdc72.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc72.Location = new System.Drawing.Point(48, 244);
-            this.sdc72.MaxLength = 1;
-            this.sdc72.Multiline = false;
-            this.sdc72.Name = "sdc72";
-            this.sdc72.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc72.Size = new System.Drawing.Size(30, 30);
-            this.sdc72.TabIndex = 19;
-            this.sdc72.Text = "";
-            // 
-            // sdc71
-            // 
-            this.sdc71.AllowSpace = false;
-            this.sdc71.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc71.Location = new System.Drawing.Point(12, 244);
-            this.sdc71.MaxLength = 1;
-            this.sdc71.Multiline = false;
-            this.sdc71.Name = "sdc71";
-            this.sdc71.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc71.Size = new System.Drawing.Size(30, 30);
-            this.sdc71.TabIndex = 18;
-            this.sdc71.Text = "";
-            // 
-            // sdc96
-            // 
-            this.sdc96.AllowSpace = false;
-            this.sdc96.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc96.Location = new System.Drawing.Point(200, 316);
-            this.sdc96.MaxLength = 1;
-            this.sdc96.Multiline = false;
-            this.sdc96.Name = "sdc96";
-            this.sdc96.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc96.Size = new System.Drawing.Size(30, 30);
-            this.sdc96.TabIndex = 53;
-            this.sdc96.Text = "";
-            // 
-            // sdc95
-            // 
-            this.sdc95.AllowSpace = false;
-            this.sdc95.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc95.Location = new System.Drawing.Point(164, 316);
-            this.sdc95.MaxLength = 1;
-            this.sdc95.Multiline = false;
-            this.sdc95.Name = "sdc95";
-            this.sdc95.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc95.Size = new System.Drawing.Size(30, 30);
-            this.sdc95.TabIndex = 52;
-            this.sdc95.Text = "";
-            // 
-            // sdc94
-            // 
-            this.sdc94.AllowSpace = false;
-            this.sdc94.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc94.Location = new System.Drawing.Point(128, 316);
-            this.sdc94.MaxLength = 1;
-            this.sdc94.Multiline = false;
-            this.sdc94.Name = "sdc94";
-            this.sdc94.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc94.Size = new System.Drawing.Size(30, 30);
-            this.sdc94.TabIndex = 51;
-            this.sdc94.Text = "";
-            // 
-            // sdc86
-            // 
-            this.sdc86.AllowSpace = false;
-            this.sdc86.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc86.Location = new System.Drawing.Point(200, 280);
-            this.sdc86.MaxLength = 1;
-            this.sdc86.Multiline = false;
-            this.sdc86.Name = "sdc86";
-            this.sdc86.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc86.Size = new System.Drawing.Size(30, 30);
-            this.sdc86.TabIndex = 50;
-            this.sdc86.Text = "";
-            // 
-            // sdc85
-            // 
-            this.sdc85.AllowSpace = false;
-            this.sdc85.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc85.Location = new System.Drawing.Point(164, 280);
-            this.sdc85.MaxLength = 1;
-            this.sdc85.Multiline = false;
-            this.sdc85.Name = "sdc85";
-            this.sdc85.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc85.Size = new System.Drawing.Size(30, 30);
-            this.sdc85.TabIndex = 49;
-            this.sdc85.Text = "";
-            // 
-            // sdc84
-            // 
-            this.sdc84.AllowSpace = false;
-            this.sdc84.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc84.Location = new System.Drawing.Point(128, 280);
-            this.sdc84.MaxLength = 1;
-            this.sdc84.Multiline = false;
-            this.sdc84.Name = "sdc84";
-            this.sdc84.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc84.Size = new System.Drawing.Size(30, 30);
-            this.sdc84.TabIndex = 48;
-            this.sdc84.Text = "";
-            // 
-            // sdc76
-            // 
-            this.sdc76.AllowSpace = false;
-            this.sdc76.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc76.Location = new System.Drawing.Point(200, 244);
-            this.sdc76.MaxLength = 1;
-            this.sdc76.Multiline = false;
-            this.sdc76.Name = "sdc76";
-            this.sdc76.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc76.Size = new System.Drawing.Size(30, 30);
-            this.sdc76.TabIndex = 47;
-            this.sdc76.Text = "";
-            // 
-            // sdc75
-            // 
-            this.sdc75.AllowSpace = false;
-            this.sdc75.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc75.Location = new System.Drawing.Point(164, 244);
-            this.sdc75.MaxLength = 1;
-            this.sdc75.Multiline = false;
-            this.sdc75.Name = "sdc75";
-            this.sdc75.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc75.Size = new System.Drawing.Size(30, 30);
-            this.sdc75.TabIndex = 46;
-            this.sdc75.Text = "";
-            // 
-            // sdc74
-            // 
-            this.sdc74.AllowSpace = false;
-            this.sdc74.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc74.Location = new System.Drawing.Point(128, 244);
-            this.sdc74.MaxLength = 1;
-            this.sdc74.Multiline = false;
-            this.sdc74.Name = "sdc74";
-            this.sdc74.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc74.Size = new System.Drawing.Size(30, 30);
-            this.sdc74.TabIndex = 45;
-            this.sdc74.Text = "";
-            // 
-            // sdc66
-            // 
-            this.sdc66.AllowSpace = false;
-            this.sdc66.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc66.Location = new System.Drawing.Point(200, 200);
-            this.sdc66.MaxLength = 1;
-            this.sdc66.Multiline = false;
-            this.sdc66.Name = "sdc66";
-            this.sdc66.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc66.Size = new System.Drawing.Size(30, 30);
-            this.sdc66.TabIndex = 44;
-            this.sdc66.Text = "";
-            // 
-            // sdc65
-            // 
-            this.sdc65.AllowSpace = false;
-            this.sdc65.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc65.Location = new System.Drawing.Point(164, 200);
-            this.sdc65.MaxLength = 1;
-            this.sdc65.Multiline = false;
-            this.sdc65.Name = "sdc65";
-            this.sdc65.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc65.Size = new System.Drawing.Size(30, 30);
-            this.sdc65.TabIndex = 43;
-            this.sdc65.Text = "";
-            // 
-            // sdc64
-            // 
-            this.sdc64.AllowSpace = false;
-            this.sdc64.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc64.Location = new System.Drawing.Point(128, 200);
-            this.sdc64.MaxLength = 1;
-            this.sdc64.Multiline = false;
-            this.sdc64.Name = "sdc64";
-            this.sdc64.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc64.Size = new System.Drawing.Size(30, 30);
-            this.sdc64.TabIndex = 42;
-            this.sdc64.Text = "";
-            // 
-            // sdc56
-            // 
-            this.sdc56.AllowSpace = false;
-            this.sdc56.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc56.Location = new System.Drawing.Point(200, 164);
-            this.sdc56.MaxLength = 1;
-            this.sdc56.Multiline = false;
-            this.sdc56.Name = "sdc56";
-            this.sdc56.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc56.Size = new System.Drawing.Size(30, 30);
-            this.sdc56.TabIndex = 41;
-            this.sdc56.Text = "";
-            // 
-            // sdc55
-            // 
-            this.sdc55.AllowSpace = false;
-            this.sdc55.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc55.Location = new System.Drawing.Point(164, 164);
-            this.sdc55.MaxLength = 1;
-            this.sdc55.Multiline = false;
-            this.sdc55.Name = "sdc55";
-            this.sdc55.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc55.Size = new System.Drawing.Size(30, 30);
-            this.sdc55.TabIndex = 40;
-            this.sdc55.Text = "";
-            // 
-            // sdc54
-            // 
-            this.sdc54.AllowSpace = false;
-            this.sdc54.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc54.Location = new System.Drawing.Point(128, 164);
-            this.sdc54.MaxLength = 1;
-            this.sdc54.Multiline = false;
-            this.sdc54.Name = "sdc54";
-            this.sdc54.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc54.Size = new System.Drawing.Size(30, 30);
-            this.sdc54.TabIndex = 39;
-            this.sdc54.Text = "";
-            // 
-            // sdc46
-            // 
-            this.sdc46.AllowSpace = false;
-            this.sdc46.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc46.Location = new System.Drawing.Point(200, 128);
-            this.sdc46.MaxLength = 1;
-            this.sdc46.Multiline = false;
-            this.sdc46.Name = "sdc46";
-            this.sdc46.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc46.Size = new System.Drawing.Size(30, 30);
-            this.sdc46.TabIndex = 38;
-            this.sdc46.Text = "";
-            // 
-            // sdc45
-            // 
-            this.sdc45.AllowSpace = false;
-            this.sdc45.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc45.Location = new System.Drawing.Point(164, 128);
-            this.sdc45.MaxLength = 1;
-            this.sdc45.Multiline = false;
-            this.sdc45.Name = "sdc45";
-            this.sdc45.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc45.Size = new System.Drawing.Size(30, 30);
-            this.sdc45.TabIndex = 37;
-            this.sdc45.Text = "";
-            // 
-            // sdc44
-            // 
-            this.sdc44.AllowSpace = false;
-            this.sdc44.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc44.Location = new System.Drawing.Point(128, 128);
-            this.sdc44.MaxLength = 1;
-            this.sdc44.Multiline = false;
-            this.sdc44.Name = "sdc44";
-            this.sdc44.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc44.Size = new System.Drawing.Size(30, 30);
-            this.sdc44.TabIndex = 36;
-            this.sdc44.Text = "";
-            // 
-            // sdc36
-            // 
-            this.sdc36.AllowSpace = false;
-            this.sdc36.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc36.Location = new System.Drawing.Point(200, 84);
-            this.sdc36.MaxLength = 1;
-            this.sdc36.Multiline = false;
-            this.sdc36.Name = "sdc36";
-            this.sdc36.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc36.Size = new System.Drawing.Size(30, 30);
-            this.sdc36.TabIndex = 35;
-            this.sdc36.Text = "";
-            // 
-            // sdc35
-            // 
-            this.sdc35.AllowSpace = false;
-            this.sdc35.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc35.Location = new System.Drawing.Point(164, 84);
-            this.sdc35.MaxLength = 1;
-            this.sdc35.Multiline = false;
-            this.sdc35.Name = "sdc35";
-            this.sdc35.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc35.Size = new System.Drawing.Size(30, 30);
-            this.sdc35.TabIndex = 34;
-            this.sdc35.Text = "";
-            // 
-            // sdc34
-            // 
-            this.sdc34.AllowSpace = false;
-            this.sdc34.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc34.Location = new System.Drawing.Point(128, 84);
-            this.sdc34.MaxLength = 1;
-            this.sdc34.Multiline = false;
-            this.sdc34.Name = "sdc34";
-            this.sdc34.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc34.Size = new System.Drawing.Size(30, 30);
-            this.sdc34.TabIndex = 33;
-            this.sdc34.Text = "";
-            // 
-            // sdc26
-            // 
-            this.sdc26.AllowSpace = false;
-            this.sdc26.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc26.Location = new System.Drawing.Point(200, 48);
-            this.sdc26.MaxLength = 1;
-            this.sdc26.Multiline = false;
-            this.sdc26.Name = "sdc26";
-            this.sdc26.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc26.Size = new System.Drawing.Size(30, 30);
-            this.sdc26.TabIndex = 32;
-            this.sdc26.Text = "";
-            // 
-            // sdc25
-            // 
-            this.sdc25.AllowSpace = false;
-            this.sdc25.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc25.Location = new System.Drawing.Point(164, 48);
-            this.sdc25.MaxLength = 1;
-            this.sdc25.Multiline = false;
-            this.sdc25.Name = "sdc25";
-            this.sdc25.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc25.Size = new System.Drawing.Size(30, 30);
-            this.sdc25.TabIndex = 31;
-            this.sdc25.Text = "";
-            // 
-            // sdc24
-            // 
-            this.sdc24.AllowSpace = false;
-            this.sdc24.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc24.Location = new System.Drawing.Point(128, 48);
-            this.sdc24.MaxLength = 1;
-            this.sdc24.Multiline = false;
-            this.sdc24.Name = "sdc24";
-            this.sdc24.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc24.Size = new System.Drawing.Size(30, 30);
-            this.sdc24.TabIndex = 30;
-            this.sdc24.Text = "";
-            // 
-            // sdc16
-            // 
-            this.sdc16.AllowSpace = false;
-            this.sdc16.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc16.Location = new System.Drawing.Point(200, 12);
-            this.sdc16.MaxLength = 1;
-            this.sdc16.Multiline = false;
-            this.sdc16.Name = "sdc16";
-            this.sdc16.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc16.Size = new System.Drawing.Size(30, 30);
-            this.sdc16.TabIndex = 29;
-            this.sdc16.Text = "";
-            // 
-            // sdc15
-            // 
-            this.sdc15.AllowSpace = false;
-            this.sdc15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc15.Location = new System.Drawing.Point(164, 12);
-            this.sdc15.MaxLength = 1;
-            this.sdc15.Multiline = false;
-            this.sdc15.Name = "sdc15";
-            this.sdc15.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc15.Size = new System.Drawing.Size(30, 30);
-            this.sdc15.TabIndex = 28;
-            this.sdc15.Text = "";
-            // 
-            // sdc14
-            // 
-            this.sdc14.AllowSpace = false;
-            this.sdc14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sdc14.Location = new System.Drawing.Point(128, 12);
-            this.sdc14.MaxLength = 1;
-            this.sdc14.Multiline = false;
-            this.sdc14.Name = "sdc14";
-            this.sdc14.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.sdc14.Size = new System.Drawing.Size(30, 30);
-            this.sdc14.TabIndex = 27;
-            this.sdc14.Text = "";
             // 
             // sdc99
             // 
@@ -1140,6 +439,7 @@ namespace Sudoku
             this.sdc19.Size = new System.Drawing.Size(30, 30);
             this.sdc19.TabIndex = 56;
             this.sdc19.Text = "";
+            this.sdc19.Validating += new System.ComponentModel.CancelEventHandler(this.sdc_Validating);
             // 
             // sdc18
             // 
@@ -1153,6 +453,7 @@ namespace Sudoku
             this.sdc18.Size = new System.Drawing.Size(30, 30);
             this.sdc18.TabIndex = 55;
             this.sdc18.Text = "";
+            this.sdc18.Validating += new System.ComponentModel.CancelEventHandler(this.sdc_Validating);
             // 
             // sdc17
             // 
@@ -1166,12 +467,735 @@ namespace Sudoku
             this.sdc17.Size = new System.Drawing.Size(30, 30);
             this.sdc17.TabIndex = 54;
             this.sdc17.Text = "";
+            this.sdc17.Validating += new System.ComponentModel.CancelEventHandler(this.sdc_Validating);
+            // 
+            // sdc96
+            // 
+            this.sdc96.AllowSpace = false;
+            this.sdc96.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc96.Location = new System.Drawing.Point(200, 316);
+            this.sdc96.MaxLength = 1;
+            this.sdc96.Multiline = false;
+            this.sdc96.Name = "sdc96";
+            this.sdc96.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc96.Size = new System.Drawing.Size(30, 30);
+            this.sdc96.TabIndex = 53;
+            this.sdc96.Text = "";
+            // 
+            // sdc95
+            // 
+            this.sdc95.AllowSpace = false;
+            this.sdc95.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc95.Location = new System.Drawing.Point(164, 316);
+            this.sdc95.MaxLength = 1;
+            this.sdc95.Multiline = false;
+            this.sdc95.Name = "sdc95";
+            this.sdc95.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc95.Size = new System.Drawing.Size(30, 30);
+            this.sdc95.TabIndex = 52;
+            this.sdc95.Text = "";
+            // 
+            // sdc94
+            // 
+            this.sdc94.AllowSpace = false;
+            this.sdc94.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc94.Location = new System.Drawing.Point(128, 316);
+            this.sdc94.MaxLength = 1;
+            this.sdc94.Multiline = false;
+            this.sdc94.Name = "sdc94";
+            this.sdc94.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc94.Size = new System.Drawing.Size(30, 30);
+            this.sdc94.TabIndex = 51;
+            this.sdc94.Text = "";
+            // 
+            // sdc86
+            // 
+            this.sdc86.AllowSpace = false;
+            this.sdc86.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc86.Location = new System.Drawing.Point(200, 280);
+            this.sdc86.MaxLength = 1;
+            this.sdc86.Multiline = false;
+            this.sdc86.Name = "sdc86";
+            this.sdc86.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc86.Size = new System.Drawing.Size(30, 30);
+            this.sdc86.TabIndex = 50;
+            this.sdc86.Text = "";
+            // 
+            // sdc85
+            // 
+            this.sdc85.AllowSpace = false;
+            this.sdc85.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc85.Location = new System.Drawing.Point(164, 280);
+            this.sdc85.MaxLength = 1;
+            this.sdc85.Multiline = false;
+            this.sdc85.Name = "sdc85";
+            this.sdc85.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc85.Size = new System.Drawing.Size(30, 30);
+            this.sdc85.TabIndex = 49;
+            this.sdc85.Text = "";
+            // 
+            // sdc84
+            // 
+            this.sdc84.AllowSpace = false;
+            this.sdc84.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc84.Location = new System.Drawing.Point(128, 280);
+            this.sdc84.MaxLength = 1;
+            this.sdc84.Multiline = false;
+            this.sdc84.Name = "sdc84";
+            this.sdc84.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc84.Size = new System.Drawing.Size(30, 30);
+            this.sdc84.TabIndex = 48;
+            this.sdc84.Text = "";
+            // 
+            // sdc76
+            // 
+            this.sdc76.AllowSpace = false;
+            this.sdc76.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc76.Location = new System.Drawing.Point(200, 244);
+            this.sdc76.MaxLength = 1;
+            this.sdc76.Multiline = false;
+            this.sdc76.Name = "sdc76";
+            this.sdc76.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc76.Size = new System.Drawing.Size(30, 30);
+            this.sdc76.TabIndex = 47;
+            this.sdc76.Text = "";
+            // 
+            // sdc75
+            // 
+            this.sdc75.AllowSpace = false;
+            this.sdc75.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc75.Location = new System.Drawing.Point(164, 244);
+            this.sdc75.MaxLength = 1;
+            this.sdc75.Multiline = false;
+            this.sdc75.Name = "sdc75";
+            this.sdc75.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc75.Size = new System.Drawing.Size(30, 30);
+            this.sdc75.TabIndex = 46;
+            this.sdc75.Text = "";
+            // 
+            // sdc74
+            // 
+            this.sdc74.AllowSpace = false;
+            this.sdc74.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc74.Location = new System.Drawing.Point(128, 244);
+            this.sdc74.MaxLength = 1;
+            this.sdc74.Multiline = false;
+            this.sdc74.Name = "sdc74";
+            this.sdc74.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc74.Size = new System.Drawing.Size(30, 30);
+            this.sdc74.TabIndex = 45;
+            this.sdc74.Text = "";
+            // 
+            // sdc66
+            // 
+            this.sdc66.AllowSpace = false;
+            this.sdc66.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc66.Location = new System.Drawing.Point(200, 200);
+            this.sdc66.MaxLength = 1;
+            this.sdc66.Multiline = false;
+            this.sdc66.Name = "sdc66";
+            this.sdc66.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc66.Size = new System.Drawing.Size(30, 30);
+            this.sdc66.TabIndex = 44;
+            this.sdc66.Text = "";
+            // 
+            // sdc65
+            // 
+            this.sdc65.AllowSpace = false;
+            this.sdc65.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc65.Location = new System.Drawing.Point(164, 200);
+            this.sdc65.MaxLength = 1;
+            this.sdc65.Multiline = false;
+            this.sdc65.Name = "sdc65";
+            this.sdc65.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc65.Size = new System.Drawing.Size(30, 30);
+            this.sdc65.TabIndex = 43;
+            this.sdc65.Text = "";
+            // 
+            // sdc64
+            // 
+            this.sdc64.AllowSpace = false;
+            this.sdc64.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc64.Location = new System.Drawing.Point(128, 200);
+            this.sdc64.MaxLength = 1;
+            this.sdc64.Multiline = false;
+            this.sdc64.Name = "sdc64";
+            this.sdc64.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc64.Size = new System.Drawing.Size(30, 30);
+            this.sdc64.TabIndex = 42;
+            this.sdc64.Text = "";
+            // 
+            // sdc56
+            // 
+            this.sdc56.AllowSpace = false;
+            this.sdc56.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc56.Location = new System.Drawing.Point(200, 164);
+            this.sdc56.MaxLength = 1;
+            this.sdc56.Multiline = false;
+            this.sdc56.Name = "sdc56";
+            this.sdc56.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc56.Size = new System.Drawing.Size(30, 30);
+            this.sdc56.TabIndex = 41;
+            this.sdc56.Text = "";
+            // 
+            // sdc55
+            // 
+            this.sdc55.AllowSpace = false;
+            this.sdc55.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc55.Location = new System.Drawing.Point(164, 164);
+            this.sdc55.MaxLength = 1;
+            this.sdc55.Multiline = false;
+            this.sdc55.Name = "sdc55";
+            this.sdc55.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc55.Size = new System.Drawing.Size(30, 30);
+            this.sdc55.TabIndex = 40;
+            this.sdc55.Text = "";
+            // 
+            // sdc54
+            // 
+            this.sdc54.AllowSpace = false;
+            this.sdc54.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc54.Location = new System.Drawing.Point(128, 164);
+            this.sdc54.MaxLength = 1;
+            this.sdc54.Multiline = false;
+            this.sdc54.Name = "sdc54";
+            this.sdc54.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc54.Size = new System.Drawing.Size(30, 30);
+            this.sdc54.TabIndex = 39;
+            this.sdc54.Text = "";
+            // 
+            // sdc46
+            // 
+            this.sdc46.AllowSpace = false;
+            this.sdc46.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc46.Location = new System.Drawing.Point(200, 128);
+            this.sdc46.MaxLength = 1;
+            this.sdc46.Multiline = false;
+            this.sdc46.Name = "sdc46";
+            this.sdc46.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc46.Size = new System.Drawing.Size(30, 30);
+            this.sdc46.TabIndex = 38;
+            this.sdc46.Text = "";
+            // 
+            // sdc45
+            // 
+            this.sdc45.AllowSpace = false;
+            this.sdc45.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc45.Location = new System.Drawing.Point(164, 128);
+            this.sdc45.MaxLength = 1;
+            this.sdc45.Multiline = false;
+            this.sdc45.Name = "sdc45";
+            this.sdc45.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc45.Size = new System.Drawing.Size(30, 30);
+            this.sdc45.TabIndex = 37;
+            this.sdc45.Text = "";
+            // 
+            // sdc44
+            // 
+            this.sdc44.AllowSpace = false;
+            this.sdc44.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc44.Location = new System.Drawing.Point(128, 128);
+            this.sdc44.MaxLength = 1;
+            this.sdc44.Multiline = false;
+            this.sdc44.Name = "sdc44";
+            this.sdc44.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc44.Size = new System.Drawing.Size(30, 30);
+            this.sdc44.TabIndex = 36;
+            this.sdc44.Text = "";
+            // 
+            // sdc36
+            // 
+            this.sdc36.AllowSpace = false;
+            this.sdc36.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc36.Location = new System.Drawing.Point(200, 84);
+            this.sdc36.MaxLength = 1;
+            this.sdc36.Multiline = false;
+            this.sdc36.Name = "sdc36";
+            this.sdc36.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc36.Size = new System.Drawing.Size(30, 30);
+            this.sdc36.TabIndex = 35;
+            this.sdc36.Text = "";
+            // 
+            // sdc35
+            // 
+            this.sdc35.AllowSpace = false;
+            this.sdc35.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc35.Location = new System.Drawing.Point(164, 84);
+            this.sdc35.MaxLength = 1;
+            this.sdc35.Multiline = false;
+            this.sdc35.Name = "sdc35";
+            this.sdc35.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc35.Size = new System.Drawing.Size(30, 30);
+            this.sdc35.TabIndex = 34;
+            this.sdc35.Text = "";
+            // 
+            // sdc34
+            // 
+            this.sdc34.AllowSpace = false;
+            this.sdc34.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc34.Location = new System.Drawing.Point(128, 84);
+            this.sdc34.MaxLength = 1;
+            this.sdc34.Multiline = false;
+            this.sdc34.Name = "sdc34";
+            this.sdc34.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc34.Size = new System.Drawing.Size(30, 30);
+            this.sdc34.TabIndex = 33;
+            this.sdc34.Text = "";
+            // 
+            // sdc26
+            // 
+            this.sdc26.AllowSpace = false;
+            this.sdc26.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc26.Location = new System.Drawing.Point(200, 48);
+            this.sdc26.MaxLength = 1;
+            this.sdc26.Multiline = false;
+            this.sdc26.Name = "sdc26";
+            this.sdc26.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc26.Size = new System.Drawing.Size(30, 30);
+            this.sdc26.TabIndex = 32;
+            this.sdc26.Text = "";
+            // 
+            // sdc25
+            // 
+            this.sdc25.AllowSpace = false;
+            this.sdc25.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc25.Location = new System.Drawing.Point(164, 48);
+            this.sdc25.MaxLength = 1;
+            this.sdc25.Multiline = false;
+            this.sdc25.Name = "sdc25";
+            this.sdc25.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc25.Size = new System.Drawing.Size(30, 30);
+            this.sdc25.TabIndex = 31;
+            this.sdc25.Text = "";
+            // 
+            // sdc24
+            // 
+            this.sdc24.AllowSpace = false;
+            this.sdc24.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc24.Location = new System.Drawing.Point(128, 48);
+            this.sdc24.MaxLength = 1;
+            this.sdc24.Multiline = false;
+            this.sdc24.Name = "sdc24";
+            this.sdc24.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc24.Size = new System.Drawing.Size(30, 30);
+            this.sdc24.TabIndex = 30;
+            this.sdc24.Text = "";
+            // 
+            // sdc16
+            // 
+            this.sdc16.AllowSpace = false;
+            this.sdc16.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc16.Location = new System.Drawing.Point(200, 12);
+            this.sdc16.MaxLength = 1;
+            this.sdc16.Multiline = false;
+            this.sdc16.Name = "sdc16";
+            this.sdc16.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc16.Size = new System.Drawing.Size(30, 30);
+            this.sdc16.TabIndex = 29;
+            this.sdc16.Text = "";
+            this.sdc16.Validating += new System.ComponentModel.CancelEventHandler(this.sdc_Validating);
+            // 
+            // sdc15
+            // 
+            this.sdc15.AllowSpace = false;
+            this.sdc15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc15.Location = new System.Drawing.Point(164, 12);
+            this.sdc15.MaxLength = 1;
+            this.sdc15.Multiline = false;
+            this.sdc15.Name = "sdc15";
+            this.sdc15.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc15.Size = new System.Drawing.Size(30, 30);
+            this.sdc15.TabIndex = 28;
+            this.sdc15.Text = "";
+            this.sdc15.Validating += new System.ComponentModel.CancelEventHandler(this.sdc_Validating);
+            // 
+            // sdc14
+            // 
+            this.sdc14.AllowSpace = false;
+            this.sdc14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc14.Location = new System.Drawing.Point(128, 12);
+            this.sdc14.MaxLength = 1;
+            this.sdc14.Multiline = false;
+            this.sdc14.Name = "sdc14";
+            this.sdc14.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc14.Size = new System.Drawing.Size(30, 30);
+            this.sdc14.TabIndex = 27;
+            this.sdc14.Text = "";
+            this.sdc14.Validating += new System.ComponentModel.CancelEventHandler(this.sdc_Validating);
+            // 
+            // sdc93
+            // 
+            this.sdc93.AllowSpace = false;
+            this.sdc93.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc93.Location = new System.Drawing.Point(84, 316);
+            this.sdc93.MaxLength = 1;
+            this.sdc93.Multiline = false;
+            this.sdc93.Name = "sdc93";
+            this.sdc93.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc93.Size = new System.Drawing.Size(30, 30);
+            this.sdc93.TabIndex = 26;
+            this.sdc93.Text = "";
+            // 
+            // sdc92
+            // 
+            this.sdc92.AllowSpace = false;
+            this.sdc92.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc92.Location = new System.Drawing.Point(48, 316);
+            this.sdc92.MaxLength = 1;
+            this.sdc92.Multiline = false;
+            this.sdc92.Name = "sdc92";
+            this.sdc92.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc92.Size = new System.Drawing.Size(30, 30);
+            this.sdc92.TabIndex = 25;
+            this.sdc92.Text = "";
+            // 
+            // sdc91
+            // 
+            this.sdc91.AllowSpace = false;
+            this.sdc91.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc91.Location = new System.Drawing.Point(12, 316);
+            this.sdc91.MaxLength = 1;
+            this.sdc91.Multiline = false;
+            this.sdc91.Name = "sdc91";
+            this.sdc91.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc91.Size = new System.Drawing.Size(30, 30);
+            this.sdc91.TabIndex = 24;
+            this.sdc91.Text = "";
+            // 
+            // sdc83
+            // 
+            this.sdc83.AllowSpace = false;
+            this.sdc83.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc83.Location = new System.Drawing.Point(84, 280);
+            this.sdc83.MaxLength = 1;
+            this.sdc83.Multiline = false;
+            this.sdc83.Name = "sdc83";
+            this.sdc83.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc83.Size = new System.Drawing.Size(30, 30);
+            this.sdc83.TabIndex = 23;
+            this.sdc83.Text = "";
+            // 
+            // sdc82
+            // 
+            this.sdc82.AllowSpace = false;
+            this.sdc82.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc82.Location = new System.Drawing.Point(48, 280);
+            this.sdc82.MaxLength = 1;
+            this.sdc82.Multiline = false;
+            this.sdc82.Name = "sdc82";
+            this.sdc82.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc82.Size = new System.Drawing.Size(30, 30);
+            this.sdc82.TabIndex = 22;
+            this.sdc82.Text = "";
+            // 
+            // sdc81
+            // 
+            this.sdc81.AllowSpace = false;
+            this.sdc81.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc81.Location = new System.Drawing.Point(12, 280);
+            this.sdc81.MaxLength = 1;
+            this.sdc81.Multiline = false;
+            this.sdc81.Name = "sdc81";
+            this.sdc81.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc81.Size = new System.Drawing.Size(30, 30);
+            this.sdc81.TabIndex = 21;
+            this.sdc81.Text = "";
+            // 
+            // sdc73
+            // 
+            this.sdc73.AllowSpace = false;
+            this.sdc73.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc73.Location = new System.Drawing.Point(84, 244);
+            this.sdc73.MaxLength = 1;
+            this.sdc73.Multiline = false;
+            this.sdc73.Name = "sdc73";
+            this.sdc73.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc73.Size = new System.Drawing.Size(30, 30);
+            this.sdc73.TabIndex = 20;
+            this.sdc73.Text = "";
+            // 
+            // sdc72
+            // 
+            this.sdc72.AllowSpace = false;
+            this.sdc72.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc72.Location = new System.Drawing.Point(48, 244);
+            this.sdc72.MaxLength = 1;
+            this.sdc72.Multiline = false;
+            this.sdc72.Name = "sdc72";
+            this.sdc72.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc72.Size = new System.Drawing.Size(30, 30);
+            this.sdc72.TabIndex = 19;
+            this.sdc72.Text = "";
+            // 
+            // sdc71
+            // 
+            this.sdc71.AllowSpace = false;
+            this.sdc71.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc71.Location = new System.Drawing.Point(12, 244);
+            this.sdc71.MaxLength = 1;
+            this.sdc71.Multiline = false;
+            this.sdc71.Name = "sdc71";
+            this.sdc71.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc71.Size = new System.Drawing.Size(30, 30);
+            this.sdc71.TabIndex = 18;
+            this.sdc71.Text = "";
+            // 
+            // sdc63
+            // 
+            this.sdc63.AllowSpace = false;
+            this.sdc63.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc63.Location = new System.Drawing.Point(84, 200);
+            this.sdc63.MaxLength = 1;
+            this.sdc63.Multiline = false;
+            this.sdc63.Name = "sdc63";
+            this.sdc63.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc63.Size = new System.Drawing.Size(30, 30);
+            this.sdc63.TabIndex = 17;
+            this.sdc63.Text = "";
+            // 
+            // sdc62
+            // 
+            this.sdc62.AllowSpace = false;
+            this.sdc62.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc62.Location = new System.Drawing.Point(48, 200);
+            this.sdc62.MaxLength = 1;
+            this.sdc62.Multiline = false;
+            this.sdc62.Name = "sdc62";
+            this.sdc62.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc62.Size = new System.Drawing.Size(30, 30);
+            this.sdc62.TabIndex = 16;
+            this.sdc62.Text = "";
+            // 
+            // sdc61
+            // 
+            this.sdc61.AllowSpace = false;
+            this.sdc61.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc61.Location = new System.Drawing.Point(12, 200);
+            this.sdc61.MaxLength = 1;
+            this.sdc61.Multiline = false;
+            this.sdc61.Name = "sdc61";
+            this.sdc61.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc61.Size = new System.Drawing.Size(30, 30);
+            this.sdc61.TabIndex = 15;
+            this.sdc61.Text = "";
+            // 
+            // sdc53
+            // 
+            this.sdc53.AllowSpace = false;
+            this.sdc53.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc53.Location = new System.Drawing.Point(84, 164);
+            this.sdc53.MaxLength = 1;
+            this.sdc53.Multiline = false;
+            this.sdc53.Name = "sdc53";
+            this.sdc53.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc53.Size = new System.Drawing.Size(30, 30);
+            this.sdc53.TabIndex = 14;
+            this.sdc53.Text = "";
+            // 
+            // sdc52
+            // 
+            this.sdc52.AllowSpace = false;
+            this.sdc52.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc52.Location = new System.Drawing.Point(48, 164);
+            this.sdc52.MaxLength = 1;
+            this.sdc52.Multiline = false;
+            this.sdc52.Name = "sdc52";
+            this.sdc52.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc52.Size = new System.Drawing.Size(30, 30);
+            this.sdc52.TabIndex = 13;
+            this.sdc52.Text = "";
+            // 
+            // sdc51
+            // 
+            this.sdc51.AllowSpace = false;
+            this.sdc51.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc51.Location = new System.Drawing.Point(12, 164);
+            this.sdc51.MaxLength = 1;
+            this.sdc51.Multiline = false;
+            this.sdc51.Name = "sdc51";
+            this.sdc51.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc51.Size = new System.Drawing.Size(30, 30);
+            this.sdc51.TabIndex = 12;
+            this.sdc51.Text = "";
+            // 
+            // sdc43
+            // 
+            this.sdc43.AllowSpace = false;
+            this.sdc43.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc43.Location = new System.Drawing.Point(84, 128);
+            this.sdc43.MaxLength = 1;
+            this.sdc43.Multiline = false;
+            this.sdc43.Name = "sdc43";
+            this.sdc43.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc43.Size = new System.Drawing.Size(30, 30);
+            this.sdc43.TabIndex = 11;
+            this.sdc43.Text = "";
+            // 
+            // sdc42
+            // 
+            this.sdc42.AllowSpace = false;
+            this.sdc42.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc42.Location = new System.Drawing.Point(48, 128);
+            this.sdc42.MaxLength = 1;
+            this.sdc42.Multiline = false;
+            this.sdc42.Name = "sdc42";
+            this.sdc42.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc42.Size = new System.Drawing.Size(30, 30);
+            this.sdc42.TabIndex = 10;
+            this.sdc42.Text = "";
+            // 
+            // sdc41
+            // 
+            this.sdc41.AllowSpace = false;
+            this.sdc41.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc41.Location = new System.Drawing.Point(12, 128);
+            this.sdc41.MaxLength = 1;
+            this.sdc41.Multiline = false;
+            this.sdc41.Name = "sdc41";
+            this.sdc41.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc41.Size = new System.Drawing.Size(30, 30);
+            this.sdc41.TabIndex = 9;
+            this.sdc41.Text = "";
+            // 
+            // sdc33
+            // 
+            this.sdc33.AllowSpace = false;
+            this.sdc33.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc33.Location = new System.Drawing.Point(84, 84);
+            this.sdc33.MaxLength = 1;
+            this.sdc33.Multiline = false;
+            this.sdc33.Name = "sdc33";
+            this.sdc33.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc33.Size = new System.Drawing.Size(30, 30);
+            this.sdc33.TabIndex = 8;
+            this.sdc33.Text = "";
+            this.sdc33.Validating += new System.ComponentModel.CancelEventHandler(this.sdc_Validating);
+            // 
+            // sdc32
+            // 
+            this.sdc32.AllowSpace = false;
+            this.sdc32.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc32.Location = new System.Drawing.Point(48, 84);
+            this.sdc32.MaxLength = 1;
+            this.sdc32.Multiline = false;
+            this.sdc32.Name = "sdc32";
+            this.sdc32.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc32.Size = new System.Drawing.Size(30, 30);
+            this.sdc32.TabIndex = 7;
+            this.sdc32.Text = "";
+            this.sdc32.Validating += new System.ComponentModel.CancelEventHandler(this.sdc_Validating);
+            // 
+            // sdc31
+            // 
+            this.sdc31.AllowSpace = false;
+            this.sdc31.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc31.Location = new System.Drawing.Point(12, 84);
+            this.sdc31.MaxLength = 1;
+            this.sdc31.Multiline = false;
+            this.sdc31.Name = "sdc31";
+            this.sdc31.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc31.Size = new System.Drawing.Size(30, 30);
+            this.sdc31.TabIndex = 6;
+            this.sdc31.Text = "";
+            this.sdc31.Validating += new System.ComponentModel.CancelEventHandler(this.sdc_Validating);
+            // 
+            // sdc23
+            // 
+            this.sdc23.AllowSpace = false;
+            this.sdc23.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc23.Location = new System.Drawing.Point(84, 48);
+            this.sdc23.MaxLength = 1;
+            this.sdc23.Multiline = false;
+            this.sdc23.Name = "sdc23";
+            this.sdc23.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc23.Size = new System.Drawing.Size(30, 30);
+            this.sdc23.TabIndex = 5;
+            this.sdc23.Text = "";
+            this.sdc23.Validating += new System.ComponentModel.CancelEventHandler(this.sdc_Validating);
+            // 
+            // sdc22
+            // 
+            this.sdc22.AllowSpace = false;
+            this.sdc22.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc22.Location = new System.Drawing.Point(48, 48);
+            this.sdc22.MaxLength = 1;
+            this.sdc22.Multiline = false;
+            this.sdc22.Name = "sdc22";
+            this.sdc22.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc22.Size = new System.Drawing.Size(30, 30);
+            this.sdc22.TabIndex = 4;
+            this.sdc22.Text = "";
+            this.sdc22.Validating += new System.ComponentModel.CancelEventHandler(this.sdc_Validating);
+            // 
+            // sdc21
+            // 
+            this.sdc21.AllowSpace = false;
+            this.sdc21.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc21.Location = new System.Drawing.Point(12, 48);
+            this.sdc21.MaxLength = 1;
+            this.sdc21.Multiline = false;
+            this.sdc21.Name = "sdc21";
+            this.sdc21.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc21.Size = new System.Drawing.Size(30, 30);
+            this.sdc21.TabIndex = 3;
+            this.sdc21.Text = "";
+            this.sdc21.Validating += new System.ComponentModel.CancelEventHandler(this.sdc_Validating);
+            // 
+            // sdc13
+            // 
+            this.sdc13.AllowSpace = false;
+            this.sdc13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc13.Location = new System.Drawing.Point(84, 12);
+            this.sdc13.MaxLength = 1;
+            this.sdc13.Multiline = false;
+            this.sdc13.Name = "sdc13";
+            this.sdc13.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc13.Size = new System.Drawing.Size(30, 30);
+            this.sdc13.TabIndex = 2;
+            this.sdc13.Text = "";
+            this.sdc13.Validating += new System.ComponentModel.CancelEventHandler(this.sdc_Validating);
+            // 
+            // sdc12
+            // 
+            this.sdc12.AllowSpace = false;
+            this.sdc12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc12.Location = new System.Drawing.Point(48, 12);
+            this.sdc12.MaxLength = 1;
+            this.sdc12.Multiline = false;
+            this.sdc12.Name = "sdc12";
+            this.sdc12.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc12.Size = new System.Drawing.Size(30, 30);
+            this.sdc12.TabIndex = 1;
+            this.sdc12.Text = "";
+            this.sdc12.Validating += new System.ComponentModel.CancelEventHandler(this.sdc_Validating);
+            // 
+            // sdc11
+            // 
+            this.sdc11.AllowSpace = false;
+            this.sdc11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdc11.Location = new System.Drawing.Point(12, 12);
+            this.sdc11.MaxLength = 1;
+            this.sdc11.Multiline = false;
+            this.sdc11.Name = "sdc11";
+            this.sdc11.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdc11.Size = new System.Drawing.Size(30, 30);
+            this.sdc11.TabIndex = 0;
+            this.sdc11.Text = "";
+            this.sdc11.Validating += new System.ComponentModel.CancelEventHandler(this.sdc_Validating);
+            // 
+            // GameMessageBox
+            // 
+            this.GameMessageBox.Location = new System.Drawing.Point(12, 352);
+            this.GameMessageBox.Name = "GameMessageBox";
+            this.GameMessageBox.Size = new System.Drawing.Size(334, 20);
+            this.GameMessageBox.TabIndex = 81;
             // 
             // GameField
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(358, 355);
+            this.ClientSize = new System.Drawing.Size(359, 377);
+            this.Controls.Add(this.GameMessageBox);
             this.Controls.Add(this.sdc99);
             this.Controls.Add(this.sdc98);
             this.Controls.Add(this.sdc97);
@@ -1257,6 +1281,7 @@ namespace Sudoku
             this.Text = "Sudoku";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1343,6 +1368,7 @@ namespace Sudoku
         private SingleDigitCenteredTextBox sdc19;
         private SingleDigitCenteredTextBox sdc18;
         private SingleDigitCenteredTextBox sdc17;
+        private TextBox GameMessageBox;
     }
 }
 

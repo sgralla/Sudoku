@@ -48,7 +48,7 @@ public class SingleDigitCenteredTextBox : RichTextBox
             //    MessageBeep();
         }
         */
-        if (!Char.IsDigit(e.KeyChar))
+        if (!Char.IsDigit(e.KeyChar) || e.KeyChar == '0')
         {
             e.Handled = true;
         }
