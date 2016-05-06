@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace Sudoku
 {
-    public partial class Form1 : Form
+    public partial class GameField : Form
     {
-        public Form1()
+        public GameField()
         {
             InitializeComponent();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+           
         }
     }
 }
