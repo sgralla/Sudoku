@@ -95,7 +95,7 @@ namespace Sudoku
                     {
                         for (int j = 0; j < 3; j++)
                         {
-                            SquareAsRow[j] = GameField[i, j];
+                            SquareAsRow[(i*3+j)] = GameField[i, j];
                         }
                     }
                 }
