@@ -112,7 +112,8 @@ namespace Sudoku
             this.sdc13 = new SingleDigitCenteredTextBox();
             this.sdc12 = new SingleDigitCenteredTextBox();
             this.sdc11 = new SingleDigitCenteredTextBox();
-            this.GameMessageBox = new System.Windows.Forms.TextBox();
+            //this.GameMessageBox = new System.Windows.Forms.TextBox();
+            GameMessageBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // sdc99
@@ -439,7 +440,6 @@ namespace Sudoku
             this.sdc19.Size = new System.Drawing.Size(30, 30);
             this.sdc19.TabIndex = 56;
             this.sdc19.Text = "";
-            this.sdc19.Validating += new System.ComponentModel.CancelEventHandler(this.sdc_Validating);
             // 
             // sdc18
             // 
@@ -453,7 +453,6 @@ namespace Sudoku
             this.sdc18.Size = new System.Drawing.Size(30, 30);
             this.sdc18.TabIndex = 55;
             this.sdc18.Text = "";
-            this.sdc18.Validating += new System.ComponentModel.CancelEventHandler(this.sdc_Validating);
             // 
             // sdc17
             // 
@@ -467,7 +466,6 @@ namespace Sudoku
             this.sdc17.Size = new System.Drawing.Size(30, 30);
             this.sdc17.TabIndex = 54;
             this.sdc17.Text = "";
-            this.sdc17.Validating += new System.ComponentModel.CancelEventHandler(this.sdc_Validating);
             // 
             // sdc96
             // 
@@ -793,7 +791,6 @@ namespace Sudoku
             this.sdc16.Size = new System.Drawing.Size(30, 30);
             this.sdc16.TabIndex = 29;
             this.sdc16.Text = "";
-            this.sdc16.Validating += new System.ComponentModel.CancelEventHandler(this.sdc_Validating);
             // 
             // sdc15
             // 
@@ -807,7 +804,6 @@ namespace Sudoku
             this.sdc15.Size = new System.Drawing.Size(30, 30);
             this.sdc15.TabIndex = 28;
             this.sdc15.Text = "";
-            this.sdc15.Validating += new System.ComponentModel.CancelEventHandler(this.sdc_Validating);
             // 
             // sdc14
             // 
@@ -821,7 +817,6 @@ namespace Sudoku
             this.sdc14.Size = new System.Drawing.Size(30, 30);
             this.sdc14.TabIndex = 27;
             this.sdc14.Text = "";
-            this.sdc14.Validating += new System.ComponentModel.CancelEventHandler(this.sdc_Validating);
             // 
             // sdc93
             // 
@@ -1069,7 +1064,6 @@ namespace Sudoku
             this.sdc33.Size = new System.Drawing.Size(30, 30);
             this.sdc33.TabIndex = 8;
             this.sdc33.Text = "";
-            this.sdc33.Validating += new System.ComponentModel.CancelEventHandler(this.sdc_Validating);
             // 
             // sdc32
             // 
@@ -1083,7 +1077,6 @@ namespace Sudoku
             this.sdc32.Size = new System.Drawing.Size(30, 30);
             this.sdc32.TabIndex = 7;
             this.sdc32.Text = "";
-            this.sdc32.Validating += new System.ComponentModel.CancelEventHandler(this.sdc_Validating);
             // 
             // sdc31
             // 
@@ -1097,7 +1090,6 @@ namespace Sudoku
             this.sdc31.Size = new System.Drawing.Size(30, 30);
             this.sdc31.TabIndex = 6;
             this.sdc31.Text = "";
-            this.sdc31.Validating += new System.ComponentModel.CancelEventHandler(this.sdc_Validating);
             // 
             // sdc23
             // 
@@ -1111,7 +1103,6 @@ namespace Sudoku
             this.sdc23.Size = new System.Drawing.Size(30, 30);
             this.sdc23.TabIndex = 5;
             this.sdc23.Text = "";
-            this.sdc23.Validating += new System.ComponentModel.CancelEventHandler(this.sdc_Validating);
             // 
             // sdc22
             // 
@@ -1125,7 +1116,6 @@ namespace Sudoku
             this.sdc22.Size = new System.Drawing.Size(30, 30);
             this.sdc22.TabIndex = 4;
             this.sdc22.Text = "";
-            this.sdc22.Validating += new System.ComponentModel.CancelEventHandler(this.sdc_Validating);
             // 
             // sdc21
             // 
@@ -1139,7 +1129,6 @@ namespace Sudoku
             this.sdc21.Size = new System.Drawing.Size(30, 30);
             this.sdc21.TabIndex = 3;
             this.sdc21.Text = "";
-            this.sdc21.Validating += new System.ComponentModel.CancelEventHandler(this.sdc_Validating);
             // 
             // sdc13
             // 
@@ -1153,7 +1142,6 @@ namespace Sudoku
             this.sdc13.Size = new System.Drawing.Size(30, 30);
             this.sdc13.TabIndex = 2;
             this.sdc13.Text = "";
-            this.sdc13.Validating += new System.ComponentModel.CancelEventHandler(this.sdc_Validating);
             // 
             // sdc12
             // 
@@ -1167,7 +1155,6 @@ namespace Sudoku
             this.sdc12.Size = new System.Drawing.Size(30, 30);
             this.sdc12.TabIndex = 1;
             this.sdc12.Text = "";
-            this.sdc12.Validating += new System.ComponentModel.CancelEventHandler(this.sdc_Validating);
             // 
             // sdc11
             // 
@@ -1181,21 +1168,26 @@ namespace Sudoku
             this.sdc11.Size = new System.Drawing.Size(30, 30);
             this.sdc11.TabIndex = 0;
             this.sdc11.Text = "";
-            this.sdc11.Validating += new System.ComponentModel.CancelEventHandler(this.sdc_Validating);
             // 
             // GameMessageBox
             // 
-            this.GameMessageBox.Location = new System.Drawing.Point(12, 352);
-            this.GameMessageBox.Name = "GameMessageBox";
-            this.GameMessageBox.Size = new System.Drawing.Size(334, 20);
-            this.GameMessageBox.TabIndex = 81;
+            //this.GameMessageBox.Location = new System.Drawing.Point(12, 352);
+            //this.GameMessageBox.Name = "GameMessageBox";
+            //this.GameMessageBox.Size = new System.Drawing.Size(334, 20);
+            //this.GameMessageBox.TabIndex = 81;
+            GameMessageBox.Location = new System.Drawing.Point(12, 352);
+            GameMessageBox.Name = "GameMessageBox";
+            GameMessageBox.Size = new System.Drawing.Size(334, 20);
+            GameMessageBox.TabIndex = 81;
+
             // 
             // GameField
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(359, 377);
-            this.Controls.Add(this.GameMessageBox);
+//            this.Controls.Add(this.GameMessageBox);
+            this.Controls.Add(GameMessageBox);
             this.Controls.Add(this.sdc99);
             this.Controls.Add(this.sdc98);
             this.Controls.Add(this.sdc97);
@@ -1368,7 +1360,7 @@ namespace Sudoku
         private SingleDigitCenteredTextBox sdc19;
         private SingleDigitCenteredTextBox sdc18;
         private SingleDigitCenteredTextBox sdc17;
-        private TextBox GameMessageBox;
+        private static TextBox GameMessageBox;
     }
 }
 
