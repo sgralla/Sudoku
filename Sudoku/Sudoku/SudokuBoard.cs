@@ -13,7 +13,7 @@ namespace Sudoku
         {
             //foreach (int Field in GameField)
             int resets = 0;
-            int resetcounter = 100;
+            int resetcounter = 200;
             int fieldreached = 0;
             int highestreached = 0;
 
@@ -32,6 +32,7 @@ namespace Sudoku
                 //        GameField[i, j] = 0;
                 //    }
                 //}
+                // Maybe just clear the current row instead of a restart ??
                 Array.Clear(GameField,0,fieldreached);
                 fieldreached = 0;
 
@@ -104,8 +105,8 @@ namespace Sudoku
 
                                     if (resets == resetcounter)
                                     {
-                                        Console.WriteLine(resets+ " " + fieldreached + " " + highestreached);
-                                        resetcounter += 100;
+                                        Console.WriteLine(resets+ " " + fieldreached + " " + highestreached + " ");
+                                        resetcounter += resetcounter;
                                     }
                                     /**/
 
