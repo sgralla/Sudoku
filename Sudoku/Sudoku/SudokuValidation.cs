@@ -84,24 +84,16 @@ namespace Sudoku
         {
             int[] SquareAsRow = new int[9];
 
-            //if (Enumerable.Range(0, 2).Contains(x))
-            if (x == 0 || x < 3)
+            int x0 = x - x % 3;
+            int y0 = y - y % 3;
+            for (int i = 0; i < 3; i++)
             {
-                //if (Enumerable.Range(0, 2).Contains(y))
-                if (y == 0 || y < 3)
-
+                for (int j = 0; j < 3; j++)
                 {
-                    for (int i = 0; i < 3; i++)
-                    {
-                        for (int j = 0; j < 3; j++)
-                        {
-                            SquareAsRow[(i*3+j)] = GameField[i, j];
-                        }
-                    }
+                    SquareAsRow[(i*3+j)] = GameField[i+x0, j+y0];
                 }
             }
-
-                return SquareAsRow;
+            return SquareAsRow;
         }
     }
 }
