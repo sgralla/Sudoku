@@ -58,16 +58,15 @@ namespace Sudoku
             // CheckRow
             for (int i = 0; i < 9; i++)
             {
-                if (GameField[x, i] == Input && i != y)
+                if (GameField[x, i] == Input)
                     result = false;
             }
-
             // Check Column
             if (result)
             {
                 for (int i = 0; i < 9; i++)
                 {
-                    if (GameField[i, y] == Input && i != x)
+                    if (GameField[i, y] == Input)
                         result = false;
                 }
             }
