@@ -30,17 +30,22 @@ namespace Sudoku
                 for (int i = 0; i < 9; ++i)
                 {
                     ArrayList NAL = new ArrayList();
-                  
+
                     // Use function to generate
-                    NAL.Add(1);
-                    NAL.Add(2);
-                    NAL.Add(3);
-                    NAL.Add(4);
-                    NAL.Add(5);
-                    NAL.Add(6);
-                    NAL.Add(7);
-                    NAL.Add(8);
-                    NAL.Add(9);
+                    for (int n = 0; n < 9; n++)
+                    {
+                        NAL.Add(n);
+                    }
+
+                    //NAL.Add(1);
+                    //NAL.Add(2);
+                    //NAL.Add(3);
+                    //NAL.Add(4);
+                    //NAL.Add(5);
+                    //NAL.Add(6);
+                    //NAL.Add(7);
+                    //NAL.Add(8);
+                    //NAL.Add(9);
 
                     for (int j = 0; j < 9; ++j)
                     {
