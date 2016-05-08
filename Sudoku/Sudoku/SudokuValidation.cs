@@ -30,6 +30,7 @@ namespace Sudoku
             String InputName;
             byte x, y;
             int InputValue;
+            bool checkRow;
             
 
             SingleDigitCenteredTextBox Input = (SingleDigitCenteredTextBox)sender;
@@ -42,9 +43,10 @@ namespace Sudoku
             --y;
 
             InputValue = Input.IntValue;
+            checkRow = true;
 
 
-            if (validateInput(x, y, GameField, InputValue))
+            if (validateInput(x, y, GameField, InputValue, checkRow))
             {
                 GameField[x, y] = InputValue;
                 return true;
@@ -52,38 +54,40 @@ namespace Sudoku
             return false;
         }
 
-        public static bool validateInput(int x, int y, int[,] GameField, int Input)
+        public static bool validateInput(int x, int y, int[,] GameField, int Input, bool checkRow)
         {
-            bool result = true;
+            bool valid = true;
 
             // CheckRow
-            for (int i = 0; i < 9; i++)
-            {
-                if (GameField[x, i] == Input)
-                    result = false;
-            }
+            if (valid && checkRow)
+                for (int i = 0; i < 9; i++)
+                {
+                    if (GameField[x, i] == Input)
+                        valid = false;
+                }
+            
             // Check Column
-            if (result)
+            if (valid)
             {
                 for (int i = 0; i < 9; i++)
                 {
                     if (GameField[i, y] == Input)
-                        result = false;
+                        valid = false;
                 }
             }
             // Check square
 
-            if (result)
+            if (valid)
             {
                 int[] SquareAsRow = new int[9];
                 SquareAsRow = getSquareAsRow(GameField, x, y);
                 for (int i = 0; i < 9; i++)
                 {
                     if (SquareAsRow[i] == Input)
-                        result = false;
+                        valid = false;
                 }
             }
-            return result;
+            return valid;
         }
 
         private static int[] getSquareAsRow(int[,] GameField, int x, int y)
