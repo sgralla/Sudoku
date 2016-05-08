@@ -12,6 +12,11 @@ namespace Sudoku
         public GameField()
         {
             InitializeComponent();
+            SudokuBoard.generateSolution(GameArray);
+            foreach (int Field in GameArray)
+            {
+                 
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)

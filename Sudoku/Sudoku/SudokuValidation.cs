@@ -38,6 +38,7 @@ namespace Sudoku
             x = Byte.Parse(InputName.Substring(3, 1));
             y = Byte.Parse(InputName.Substring(4, 1));
             --x;
+
             --y;
 
             InputValue = Input.IntValue;
@@ -51,7 +52,7 @@ namespace Sudoku
             return false;
         }
 
-        private static bool validateInput(int x, int y, int[,] GameField, int Input)
+        public static bool validateInput(int x, int y, int[,] GameField, int Input)
         {
             bool result = true;
 
