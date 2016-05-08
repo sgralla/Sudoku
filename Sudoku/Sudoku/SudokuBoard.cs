@@ -39,12 +39,34 @@ namespace Sudoku
                 }
                 for (int i = 0; i < 9; ++i)
                 {
+                    int itemp = 99;
                     for (int j = 0; j < 9; ++j)
                     {
                         bool ValidInsert = false;
                         
                         // ToDo: Only add values which will not fail due being already in the row
                         ArrayList NAL = new ArrayList();
+                        // if (itemp != i)
+                        // {
+                        // New
+                        
+                             int[] GameRow = new int[9];
+                             for (int r = 0; r < 9; r++)
+                             {
+                                 GameRow[r] = GameField[i, r];
+                             }
+
+                             for (int s = 1; s <= 9; s++)
+                             {
+                                 if (!GameRow.Contains(s))
+                                     NAL.Add(s);
+                             }
+                         //    itemp = i;
+                         //}
+                        
+
+                        //OLD
+                        /*
                         NAL.Add(1);
                         NAL.Add(2);
                         NAL.Add(3);
@@ -54,6 +76,7 @@ namespace Sudoku
                         NAL.Add(7);
                         NAL.Add(8);
                         NAL.Add(9);
+                        */
 
                         while (!ValidInsert)
                         {
@@ -71,16 +94,20 @@ namespace Sudoku
                             {
                                 ValidInsert = true;
                                 GameField[i, j] = InputNumber;
+                                NAL.Remove(InputNumber);
                             }
                             else
                             {
                                 NAL.Remove(InputNumber);
-                            }
-                            if (NAL.Count == 0)
-                            {
-                                NeedToCheck = false;
-                                ++resets;
-                                break;
+
+                                if (NAL.Count == 0)
+                                {
+                                    NeedToCheck = false;
+                                    ++resets;
+                                    if (resets == 100000)
+                                        Console.WriteLine(resets);
+                                    break;
+                                }
                             }
                             if (!NeedToCheck) break;
                         }
