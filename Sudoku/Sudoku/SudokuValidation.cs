@@ -63,19 +63,25 @@ namespace Sudoku
             }
 
             // Check Column
-            for (int i = 0; i < 9; i++)
+            if (result)
             {
-                if (GameField[i, y] == Input && i != x)
-                    result = false;
+                for (int i = 0; i < 9; i++)
+                {
+                    if (GameField[i, y] == Input && i != x)
+                        result = false;
+                }
             }
-
             // Check square
-            int[] SquareAsRow = new int[9];
-            SquareAsRow = getSquare(GameField, x, y);
-            for (int i = 0; i < 9; i++)
+
+            if (result)
             {
-                if (SquareAsRow[i] == Input)
-                    result = false;
+                int[] SquareAsRow = new int[9];
+                SquareAsRow = getSquare(GameField, x, y);
+                for (int i = 0; i < 9; i++)
+                {
+                    if (SquareAsRow[i] == Input)
+                        result = false;
+                }
             }
             return result;
         }
