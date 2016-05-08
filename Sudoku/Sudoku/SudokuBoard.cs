@@ -13,6 +13,10 @@ namespace Sudoku
         {
             //foreach (int Field in GameField)
             int resets = 0;
+            int resetcounter = 100;
+            int fieldreached = 0;
+            int highestreached = 0;
+
             bool filled = false;
             bool NeedToCheck;
             bool checkRow = false;
@@ -20,53 +24,61 @@ namespace Sudoku
             while (!filled)
             {
                 NeedToCheck = true;
+                // replaced by array.clear function
+                //for (int i = 0; i < 9; ++i)
+                //{
+                //    for (int j = 0; j < 9; ++j)
+                //    {
+                //        GameField[i, j] = 0;
+                //    }
+                //}
+                Array.Clear(GameField,0,fieldreached);
+                fieldreached = 0;
+
                 for (int i = 0; i < 9; ++i)
                 {
-                    for (int j = 0; j < 9; ++j)
-                    {
-                        GameField[i, j] = 0;
-                    }
-                }
-                for (int i = 0; i < 9; ++i)
-                {
-                    ArrayList NAL = new ArrayList();
+                    ArrayList RowList = new ArrayList();
 
                     // Use function to generate
-                    for (int n = 0; n < 9; n++)
+                    // Should not be generated everytime
+                    // instead copied from or better create an instance of
+                    for (int n = 1; n <= 9; n++)
                     {
-                        NAL.Add(n);
+                        RowList.Add(n);
                     }
 
-                    //NAL.Add(1);
-                    //NAL.Add(2);
-                    //NAL.Add(3);
-                    //NAL.Add(4);
-                    //NAL.Add(5);
-                    //NAL.Add(6);
-                    //NAL.Add(7);
-                    //NAL.Add(8);
-                    //NAL.Add(9);
+                    //RowList.Add(1);
+                    //RowList.Add(2);
+                    //RowList.Add(3);
+                    //RowList.Add(4);
+                    //RowList.Add(5);
+                    //RowList.Add(6);
+                    //RowList.Add(7);
+                    //RowList.Add(8);
+                    //RowList.Add(9);
 
                     for (int j = 0; j < 9; ++j)
                     {
                         bool ValidInsert = false;
-                        
+                        ArrayList FieldList = RowList;
+
+
                         while (!ValidInsert)
                         {
                             int InputNumber;
 
                             Random rnd = new Random();
-                            if (NAL.Count == 0)
+                            if (FieldList.Count == 0)
                             {
                                 NeedToCheck = false;
                                 break;
                             }
                               
 
-                            int Number = rnd.Next(0, NAL.Count);
+                            int Number = rnd.Next(0, RowList.Count);
                             
-                            int[] InpNum = new int[NAL.Count];
-                            NAL.CopyTo(InpNum);
+                            int[] InpNum = new int[FieldList.Count];
+                            FieldList.CopyTo(InpNum);
                             InputNumber = InpNum[Number];
 
 
@@ -74,21 +86,31 @@ namespace Sudoku
                             {
                                 ValidInsert = true;
                                 GameField[i, j] = InputNumber;
-                                NAL.Remove(InputNumber);
+                                RowList.Remove(InputNumber);
+                                ++fieldreached;
                             }
                             else
                             {
-                                NAL.Remove(InputNumber);
+                                FieldList.Remove(InputNumber);
 
-                                if (NAL.Count == 0)
+                                if (FieldList.Count == 0)
                                 {
                                     NeedToCheck = false;
                                     ++resets;
                                     // performance check
-                                    /*
-                                    if (resets == 200)
-                                        Console.WriteLine(resets);
-                                    */
+                                    /**/
+
+                                    if (fieldreached > highestreached) highestreached = fieldreached;
+
+                                    if (resets == resetcounter)
+                                    {
+                                        Console.WriteLine(resets+ " " + fieldreached + " " + highestreached);
+                                        resetcounter += 100;
+                                    }
+                                    /**/
+
+                                    
+
                                     break;
                                 }
                             }
