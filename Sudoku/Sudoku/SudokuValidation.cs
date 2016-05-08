@@ -76,7 +76,7 @@ namespace Sudoku
             if (result)
             {
                 int[] SquareAsRow = new int[9];
-                SquareAsRow = getSquare(GameField, x, y);
+                SquareAsRow = getSquareAsRow(GameField, x, y);
                 for (int i = 0; i < 9; i++)
                 {
                     if (SquareAsRow[i] == Input)
@@ -86,7 +86,7 @@ namespace Sudoku
             return result;
         }
 
-        private static int[] getSquare(int[,] GameField, int x, int y)
+        private static int[] getSquareAsRow(int[,] GameField, int x, int y)
         {
             int[] SquareAsRow = new int[9];
 
