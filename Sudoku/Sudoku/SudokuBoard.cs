@@ -29,21 +29,8 @@ namespace Sudoku
                 }
                 for (int i = 0; i < 9; ++i)
                 {
-                    // New CheckRow only when next row reached
                     ArrayList NAL = new ArrayList();
-                    // Not necessary to check anything because a new row should always be empty
-                    //int[] CheckRow = new int[9];
-                    //for (int r = 0; r < 9; r++)
-                    //{
-                    //    CheckRow[r] = GameField[i, r];
-                    //}
-
-                    //for (int s = 1; s <= 9; s++)
-                    //{
-                    //    if (!CheckRow.Contains(s))
-                    //        NAL.Add(s);
-                    //}
-
+                  
                     // Use function to generate
                     NAL.Add(1);
                     NAL.Add(2);
@@ -59,41 +46,6 @@ namespace Sudoku
                     {
                         bool ValidInsert = false;
                         
-                        // ToDo: Only add values which will not fail due being already in the row
-                        //ArrayList NAL = new ArrayList();
-                        // if (itemp != i)
-                        // {
-                        // New
-                        /*
-                             int[] CheckRow = new int[9];
-                             for (int r = 0; r < 9; r++)
-                             {
-                                 CheckRow[r] = GameField[i, r];
-                             }
-
-                             for (int s = 1; s <= 9; s++)
-                             {
-                                 if (!CheckRow.Contains(s))
-                                     NAL.Add(s);
-                             }
-                         //    itemp = i;
-                         //}
-                         */
-                        
-
-                        //OLD
-                        /*
-                        NAL.Add(1);
-                        NAL.Add(2);
-                        NAL.Add(3);
-                        NAL.Add(4);
-                        NAL.Add(5);
-                        NAL.Add(6);
-                        NAL.Add(7);
-                        NAL.Add(8);
-                        NAL.Add(9);
-                        */
-
                         while (!ValidInsert)
                         {
                             int InputNumber;
@@ -127,8 +79,11 @@ namespace Sudoku
                                 {
                                     NeedToCheck = false;
                                     ++resets;
+                                    // performance check
+                                    /*
                                     if (resets == 200)
                                         Console.WriteLine(resets);
+                                    */
                                     break;
                                 }
                             }
