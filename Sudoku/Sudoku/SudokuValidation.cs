@@ -30,7 +30,7 @@ namespace Sudoku
             String InputName;
             byte x, y;
             int InputValue;
-            bool checkRow;
+            bool checkRow, checkColumn, checkSquare;
             
 
             SingleDigitCenteredTextBox Input = (SingleDigitCenteredTextBox)sender;
@@ -44,9 +44,11 @@ namespace Sudoku
 
             InputValue = Input.IntValue;
             checkRow = true;
+            checkColumn = true;
+            checkSquare = true;
 
 
-            if (validateInput(x, y, GameField, InputValue, checkRow))
+            if (validateInput(x, y, GameField, InputValue, checkRow, checkColumn, checkSquare))
             {
                 GameField[x, y] = InputValue;
                 return true;
@@ -54,7 +56,7 @@ namespace Sudoku
             return false;
         }
 
-        public static bool validateInput(int x, int y, int[,] GameField, int Input, bool checkRow)
+        public static bool validateInput(int x, int y, int[,] GameField, int Input, bool checkRow, bool checkColumn, bool checkSquare)
         {
             bool valid = true;
 
@@ -73,7 +75,7 @@ namespace Sudoku
              
             
             // Check Column
-            if (valid)
+            if (valid && checkColumn)
             {
                 for (int i = 0; i < 9; i++)
                 {
@@ -87,7 +89,7 @@ namespace Sudoku
             }
             // Check square
 
-            if (valid)
+            if (valid && checkSquare)
             {
                 //int[] SquareAsRow = new int[9];
                 //SquareAsRow = getSquareAsRow(GameField, x, y);
@@ -103,7 +105,7 @@ namespace Sudoku
                 //// or will be an improvement
                 //valid = !Array.Exists(SquareAsRow, delegate (int s) { return s.Equals(Input); });
 
-                valid = checkSquare(GameField, x, y, Input);
+                valid = checkSquareFunction(GameField, x, y, Input);
             }
             return valid;
         }
@@ -125,7 +127,7 @@ namespace Sudoku
             return SquareAsRow;
         }
 
-        private static bool checkSquare(int[,] GameField, int x, int y, int Input)
+        private static bool checkSquareFunction(int[,] GameField, int x, int y, int Input)
         {
             // Instead of creating an array to easyly check I should check the GameField directly
             //int[] SquareAsRow = new int[9];
