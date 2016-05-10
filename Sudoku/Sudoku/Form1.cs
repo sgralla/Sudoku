@@ -30,10 +30,10 @@ namespace Sudoku
         public static void sdc_Validating(object sender, CancelEventArgs e)
         {
             SingleDigitCenteredTextBox sdc = (SingleDigitCenteredTextBox)sender;
-            if (sdc.Text != "Gültige Zahl eingeben.")
+            //if (sdc.Text != "Gültige Zahl eingeben.")
                 setGameMessageBox(SudokuValidation.checkInput(GameArray, sender));
-            else
-                SudokuValidation.clearField(GameArray, sender);
+            //else
+            //    SudokuValidation.clearField(GameArray, sender);
           
         }
 

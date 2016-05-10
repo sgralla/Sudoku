@@ -28,7 +28,7 @@ namespace Sudoku
         private static bool InsertInput(int[,] GameField, object sender)
         {
             SingleDigitCenteredTextBox Input = (SingleDigitCenteredTextBox)sender;
-            byte x = 0 , y = 0;
+            //byte x = 0 , y = 0;
             int InputValue;
             bool checkRow, checkColumn, checkSquare;
             byte[] Position = new byte[2];
@@ -44,7 +44,7 @@ namespace Sudoku
 
             if (validateInput(Position[0], Position[1], GameField, InputValue, checkRow, checkColumn, checkSquare))
             {
-                GameField[x, y] = InputValue;
+                GameField[Position[0], Position[1]] = InputValue;
                 return true;
             }
             return false;
