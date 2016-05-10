@@ -22,7 +22,7 @@ namespace Sudoku
             bool checkRow = false;
             bool checkColumn = true;
             bool checkSquare = true;
-            
+    
             while (!filled)
             {
                 NeedToCheck = true;
@@ -234,8 +234,48 @@ namespace Sudoku
                 }
             }
             return SquareList.Count == 0;
-
         }
+
+        public static void generateSmartSolutionRow(int[,] GameField)
+        {
+            for (int i = 0; i < 9; i++)
+            {
+                for (int j = 0; j < 9; j++)
+                {
+                    GameField[i,j] = getNumberForRow(GameField, i, j);
+                }
+            }
+        }
+            
+
+        private static int getNumberForRow(int[,] GameField, int x, int y)
+        {
+            int RNumber = 0;
+            int Rpossibilities = 0;
+            int Cpossibilities = 0;
+            int CRNumber = 0;
+
+            for (int i = x; i < 9; i++)
+            {
+                for (int j = 1; j <= 9; j++)
+                {
+                    if (SudokuValidation.validateInput(x, y, GameField, i, true, true, true))
+                    {
+                        Cpossibilities++;
+                        CRNumber = i;
+                    }
+                    if (Cpossibilities <= Rpossibilities)
+                    {
+                        Rpossibilities = Cpossibilities;
+                        RNumber = CRNumber;
+                    }
+                }
+               
+
+            }
+            return RNumber;
+        }
+
 /*
         private static bool FindValidInsert(bool ValidInsert, ArrayList RowList, ArrayList FieldList, bool NeedToCheck, int[,] GameField, int fieldreached, int highestreached, bool checkRow, int resets, int resetcounter, int i, int j)
         {
