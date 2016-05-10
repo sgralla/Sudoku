@@ -32,7 +32,7 @@ namespace Sudoku
                     ArrayList NAL = new ArrayList();
 
                     // Use function to generate
-                    for (int n = 0; n < 9; n++)
+                    for (int n = 1; n <= 9; n++)
                     {
                         NAL.Add(n);
                     }
@@ -78,17 +78,18 @@ namespace Sudoku
                             }
                             else
                             {
-                                NAL.Remove(InputNumber);
+                                // Entry could still be valid at later point
+                                //NAL.Remove(InputNumber);
 
                                 if (NAL.Count == 0)
                                 {
                                     NeedToCheck = false;
                                     ++resets;
                                     // performance check
-                                    /*
-                                    if (resets == 200)
+                                    ///*
+                                    if (resets == 2000)
                                         Console.WriteLine(resets);
-                                    */
+                                    //*/
                                     break;
                                 }
                             }
