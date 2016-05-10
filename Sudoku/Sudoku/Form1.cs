@@ -14,6 +14,8 @@ namespace Sudoku
             InitializeComponent();
             //SudokuBoard.generateSolutionRow(GameArray);
             //SudokuBoard.generateSolutionSquare(GameArray);
+            //GameArray[0, 0] = 1;
+
             SudokuBoard.generateSmartSolutionRow(GameArray);
 
             foreach (int Field in GameArray)

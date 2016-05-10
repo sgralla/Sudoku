@@ -238,15 +238,27 @@ namespace Sudoku
 
         public static void generateSmartSolutionRow(int[,] GameField)
         {
-            int solved;
+            // To Output array to console
+            int solveNumber; // debug variable
+
             for (int i = 0; i < 9; i++)
             {
                 for (int j = 0; j < 9; j++)
                 {
-                    //GameField[i,j] = getNumberForRow(GameField, i, j);
-                    solved = getNumberForRow(GameField, i, j);
-                    GameField[i, j] = solved;
-                    Console.Write(solved + " ");
+                    //if (GameField[i, j] == 0)
+                    //  GameField[i,j] = getNumberForRow(GameField, i, j);
+                    //if (i == 3 && j ==1)
+                    //    Console.WriteLine("Break");
+
+                    // To Output array to console
+                    if (GameField[i, j] == 0)
+                    {
+                        solveNumber = getNumberForRow(GameField, i, j);
+                        GameField[i, j] = solveNumber;
+                        Console.Write(solveNumber + " ");
+                    }
+                    else
+                        Console.Write(GameField[i, j] + " ");
                 }
                 Console.WriteLine();
             }
@@ -266,7 +278,9 @@ namespace Sudoku
                 //RPos = 0;
                 for (int j = y; j < 9; j++)
                 {
-                    if (SudokuValidation.validateInput(x, y, GameField, i, true, true, true))
+                    // Does not work because already inserted values are not
+                    // considered in the checkFunction
+                    if (SudokuValidation.validateInput(x, j, GameField, i, true, true, true))
                     {
                         CPos++;
                         //CRNumber = i;
@@ -283,6 +297,10 @@ namespace Sudoku
 
 
             }
+            // Check if Input is valid for current Position else decrease Number;
+            while (!SudokuValidation.validateInput(x, y, GameField, RNumber, true, true, true))
+                --RNumber;
+
             return RNumber;
         }
     }

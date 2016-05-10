@@ -80,7 +80,7 @@ namespace Sudoku
         public static bool validateInput(int x, int y, int[,] GameField, int Input, bool checkRow, bool checkColumn, bool checkSquare)
         {
             bool valid = true;
-
+            int validcounter;
             
             // Empty SDC.Text will be set to 0
             // which should always be allowed
@@ -88,30 +88,39 @@ namespace Sudoku
             {
                 // CheckRow
                 if (valid && checkRow)
+                {
+                    validcounter = 0;
                     for (int i = 0; i < 9; i++)
                     {
-                        if (GameField[x, i] == Input)
+                        if (GameField[x, i] != Input)
                         {
-                            valid = false;
+                            ++validcounter;
                             // no need to check any further
-                            break;
+                            //break;
                         }
                     }
-
+                    if (validcounter < 9)
+                        valid = false;
+                }
 
 
                 // Check Column
                 if (valid && checkColumn)
                 {
+                    validcounter = 0;
                     for (int i = 0; i < 9; i++)
                     {
-                        if (GameField[i, y] == Input)
+                        if (GameField[i, y] != Input)
                         {
-                            valid = false;
+                            //valid = false;
                             // no need to check any further
-                            break;
+                            //break;
+                            ++validcounter;
                         }
                     }
+                    if ((validcounter+y) < 9)
+                        valid = false;
+
                 }
                 // Check square
 
