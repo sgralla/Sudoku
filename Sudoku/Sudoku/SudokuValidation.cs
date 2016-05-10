@@ -73,6 +73,7 @@ namespace Sudoku
       
             byte[] Position = new byte[2];
             Position = getPosition(GameArray, Input);
+            GameArray[Position[0],Position[1]] = 0;
         }
 
         public static bool validateInput(int x, int y, int[,] GameField, int Input, bool checkRow, bool checkColumn, bool checkSquare)
@@ -80,51 +81,54 @@ namespace Sudoku
             bool valid = true;
 
             // CheckRow
-            if (valid && checkRow && (Input != 0))
-                for (int i = 0; i < 9; i++)
-                {
-                    if (GameField[x, i] == Input)
+            if (Input != 0)
+            {
+                if (valid && checkRow)
+                    for (int i = 0; i < 9; i++)
                     {
-                        valid = false;
-                        // no need to check any further
-                        break;
+                        if (GameField[x, i] == Input)
+                        {
+                            valid = false;
+                            // no need to check any further
+                            break;
+                        }
+                    }
+
+
+
+                // Check Column
+                if (valid && checkColumn)
+                {
+                    for (int i = 0; i < 9; i++)
+                    {
+                        if (GameField[i, y] == Input)
+                        {
+                            valid = false;
+                            // no need to check any further
+                            break;
+                        }
                     }
                 }
-            
-             
-            
-            // Check Column
-            if (valid && checkColumn)
-            {
-                for (int i = 0; i < 9; i++)
+                // Check square
+
+                if (valid && checkSquare)
                 {
-                    if (GameField[i, y] == Input)
-                    {
-                        valid = false;
-                        // no need to check any further
-                        break;
-                    }
+                    //int[] SquareAsRow = new int[9];
+                    //SquareAsRow = getSquareAsRow(GameField, x, y);
+
+                    ////for (int i = 0; i < 9; i++)
+                    ////{
+                    ////    if (SquareAsRow[i] == Input)
+                    ////        valid = false;
+                    ////}
+
+                    //// just copied this and modified it a little bit
+                    //// not sure how it works
+                    //// or will be an improvement
+                    //valid = !Array.Exists(SquareAsRow, delegate (int s) { return s.Equals(Input); });
+
+                    valid = checkSquareFunction(GameField, x, y, Input);
                 }
-            }
-            // Check square
-
-            if (valid && checkSquare)
-            {
-                //int[] SquareAsRow = new int[9];
-                //SquareAsRow = getSquareAsRow(GameField, x, y);
-
-                ////for (int i = 0; i < 9; i++)
-                ////{
-                ////    if (SquareAsRow[i] == Input)
-                ////        valid = false;
-                ////}
-
-                //// just copied this and modified it a little bit
-                //// not sure how it works
-                //// or will be an improvement
-                //valid = !Array.Exists(SquareAsRow, delegate (int s) { return s.Equals(Input); });
-
-                valid = checkSquareFunction(GameField, x, y, Input);
             }
             return valid;
         }

@@ -63,7 +63,10 @@ public class SingleDigitCenteredTextBox : RichTextBox
     {
         get
         {
-            return Int32.Parse(this.Text);
+            //Int32.Parse(this.Text);
+            int IntValue = 0; 
+            Int32.TryParse(this.Text, out IntValue);
+            return IntValue;
         }
     }
 
