@@ -89,41 +89,65 @@ namespace Sudoku
                 // CheckRow
                 if (valid && checkRow)
                 {
-                    validcounter = 0;
+                    // with validcounter
+                    //validcounter = 0;
+                    //for (int i = 0; i < 9; i++)
+                    //{
+                    //    if (GameField[x, i] != Input)
+                    //    {
+                    //        ++validcounter;
+                    //        //no need to check any further
+                    //        break;
+                    //    }
+                    //}
+                    //if (validcounter < 9)
+                    //    valid = false;
+
+                    //without validcounter
                     for (int i = 0; i < 9; i++)
                     {
-                        if (GameField[x, i] != Input)
+                        if (GameField[x, i] == Input)
                         {
-                            ++validcounter;
+                            valid = false;
                             // no need to check any further
-                            //break;
+                            break;
                         }
                     }
-                    if (validcounter < 9)
-                        valid = false;
                 }
 
 
                 // Check Column
                 if (valid && checkColumn)
                 {
-                    validcounter = 0;
+                    // with validcounter
+                    //validcounter = 0;
+                    //for (int i = 0; i < 9; i++)
+                    //{
+                    //    if (GameField[i, y] != Input)
+                    //    {
+                    //        //valid = false;
+                    //        // no need to check any further
+                    //        //break;
+                    //        ++validcounter;
+                    //    }
+                    //}
+                    //if (validcounter < 9)
+                    //    valid = false;
+
+                    // without validcounter
                     for (int i = 0; i < 9; i++)
                     {
-                        if (GameField[i, y] != Input)
+                        if (GameField[i, y] == Input)
                         {
-                            //valid = false;
+                            valid = false;
                             // no need to check any further
-                            //break;
-                            ++validcounter;
+                            break;
                         }
                     }
-                    if ((validcounter+y) < 9)
-                        valid = false;
 
                 }
+                
                 // Check square
-
                 if (valid && checkSquare)
                 {
                     //int[] SquareAsRow = new int[9];
