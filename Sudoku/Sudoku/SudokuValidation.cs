@@ -27,20 +27,14 @@ namespace Sudoku
 
         private static bool InsertInput(int[,] GameField, object sender)
         {
-            String InputName;
-            byte x, y;
+            SingleDigitCenteredTextBox Input = (SingleDigitCenteredTextBox)sender;
+            byte x = 0 , y = 0;
             int InputValue;
             bool checkRow, checkColumn, checkSquare;
+            byte[] Position = new byte[2];
+
             
-
-            SingleDigitCenteredTextBox Input = (SingleDigitCenteredTextBox)sender;
-
-            InputName = Input.Name;
-            x = Byte.Parse(InputName.Substring(3, 1));
-            y = Byte.Parse(InputName.Substring(4, 1));
-            --x;
-
-            --y;
+            Position = getPosition(GameField, Input);
 
             InputValue = Input.IntValue;
             checkRow = true;
@@ -48,7 +42,7 @@ namespace Sudoku
             checkSquare = true;
 
 
-            if (validateInput(x, y, GameField, InputValue, checkRow, checkColumn, checkSquare))
+            if (validateInput(Position[0], Position[1], GameField, InputValue, checkRow, checkColumn, checkSquare))
             {
                 GameField[x, y] = InputValue;
                 return true;
@@ -56,12 +50,37 @@ namespace Sudoku
             return false;
         }
 
+        private static byte[] getPosition(int[,] gameField, SingleDigitCenteredTextBox Input)
+        {
+            byte[] Position = new byte[2];
+            String InputName;
+            byte x, y;
+            InputName = Input.Name;
+            x = Byte.Parse(InputName.Substring(3, 1));
+            y = Byte.Parse(InputName.Substring(4, 1));
+            --x;
+
+            --y;
+
+            Position[0] = x;
+            Position[1] = y;
+            return Position;
+        }
+
+        internal static void clearField(int[,] GameArray, object sender)
+        {
+            SingleDigitCenteredTextBox Input = (SingleDigitCenteredTextBox)sender;
+      
+            byte[] Position = new byte[2];
+            Position = getPosition(GameArray, Input);
+        }
+
         public static bool validateInput(int x, int y, int[,] GameField, int Input, bool checkRow, bool checkColumn, bool checkSquare)
         {
             bool valid = true;
 
             // CheckRow
-            if (valid && checkRow)
+            if (valid && checkRow && (Input != 0))
                 for (int i = 0; i < 9; i++)
                 {
                     if (GameField[x, i] == Input)

@@ -182,7 +182,7 @@ namespace Sudoku
         private static bool FillSquare(ArrayList NumberList, int[,] GameField, int SquareNumber)
         {
             int[,] Square = new int[3,3];
-            bool filled = false;
+            //bool filled = false;
             bool ValidInsertFound = false;
             int InputNumber;
             int ii, jj;
@@ -238,12 +238,17 @@ namespace Sudoku
 
         public static void generateSmartSolutionRow(int[,] GameField)
         {
+            int solved;
             for (int i = 0; i < 9; i++)
             {
                 for (int j = 0; j < 9; j++)
                 {
-                    GameField[i,j] = getNumberForRow(GameField, i, j);
+                    //GameField[i,j] = getNumberForRow(GameField, i, j);
+                    solved = getNumberForRow(GameField, i, j);
+                    GameField[i, j] = solved;
+                    Console.Write(solved + " ");
                 }
+                Console.WriteLine();
             }
         }
             
@@ -251,26 +256,31 @@ namespace Sudoku
         private static int getNumberForRow(int[,] GameField, int x, int y)
         {
             int RNumber = 0;
-            int Rpossibilities = 0;
-            int Cpossibilities = 0;
-            int CRNumber = 0;
+            int RPos = 0;
+            int CPos = 0;
+            //int CRNumber = 0;
 
-            for (int i = x; i < 9; i++)
+            for (int i = 1; i <= 9; i++)
             {
-                for (int j = 1; j <= 9; j++)
+                CPos = 0;
+                //RPos = 0;
+                for (int j = y; j < 9; j++)
                 {
                     if (SudokuValidation.validateInput(x, y, GameField, i, true, true, true))
                     {
-                        Cpossibilities++;
-                        CRNumber = i;
+                        CPos++;
+                        //CRNumber = i;
                     }
-                    if (Cpossibilities <= Rpossibilities)
-                    {
-                        Rpossibilities = Cpossibilities;
-                        RNumber = CRNumber;
-                    }
+                  
                 }
-               
+                if (CPos != 0 && ((RPos == 0) || (CPos <= RPos)))
+                { 
+                    RPos = CPos;
+                    RNumber = i;
+                    //if (RNumber == 1)
+                    //    return RNumber;
+                }
+
 
             }
             return RNumber;

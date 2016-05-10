@@ -14,7 +14,7 @@ namespace Sudoku
             InitializeComponent();
             //SudokuBoard.generateSolutionRow(GameArray);
             //SudokuBoard.generateSolutionSquare(GameArray);
-            SudokuBoard.generateSmartSolutionRow(GameArray);
+            //SudokuBoard.generateSmartSolutionRow(GameArray);
 
             foreach (int Field in GameArray)
             {
@@ -30,8 +30,11 @@ namespace Sudoku
         public static void sdc_Validating(object sender, CancelEventArgs e)
         {
             SingleDigitCenteredTextBox sdc = (SingleDigitCenteredTextBox)sender;
-            if (sdc.Text != "")
+            if (sdc.Text != "Gültige Zahl eingeben.")
                 setGameMessageBox(SudokuValidation.checkInput(GameArray, sender));
+            else
+                SudokuValidation.clearField(GameArray, sender);
+          
         }
 
         public static void setGameMessageBox(String Text)
