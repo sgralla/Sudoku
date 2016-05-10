@@ -28,12 +28,12 @@ namespace Sudoku
         private static bool InsertInput(int[,] GameField, object sender)
         {
             SingleDigitCenteredTextBox Input = (SingleDigitCenteredTextBox)sender;
-            //byte x = 0 , y = 0;
+            //byte x = 0 , y = 0; //Now Position[0], Position[1];
             int InputValue;
             bool checkRow, checkColumn, checkSquare;
             byte[] Position = new byte[2];
 
-            
+            // GameField[X,Y] - X = Position[0] & Y = Position[1];
             Position = getPosition(GameField, Input);
 
             InputValue = Input.IntValue;
@@ -67,6 +67,7 @@ namespace Sudoku
             return Position;
         }
 
+        // Not required because an empty SDC will set the array value to 0
         internal static void clearField(int[,] GameArray, object sender)
         {
             SingleDigitCenteredTextBox Input = (SingleDigitCenteredTextBox)sender;
@@ -80,9 +81,12 @@ namespace Sudoku
         {
             bool valid = true;
 
-            // CheckRow
+            
+            // Empty SDC.Text will be set to 0
+            // which should always be allowed
             if (Input != 0)
             {
+                // CheckRow
                 if (valid && checkRow)
                     for (int i = 0; i < 9; i++)
                     {
