@@ -8,20 +8,11 @@ namespace Sudoku
     {
         // Global variables
         static int[,] GameArray = new int[9, 9];
+        
 
         public GameField()
         {
             InitializeComponent();
-            //SudokuBoard.generateSolutionRow(GameArray);
-            //SudokuBoard.generateSolutionSquare(GameArray);
-            //GameArray[0, 0] = 1;
-
-            SudokuBoard.generateSmartSolutionRow(GameArray);
-
-            foreach (int Field in GameArray)
-            {
-                 
-            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -32,16 +23,25 @@ namespace Sudoku
         public static void sdc_Validating(object sender, CancelEventArgs e)
         {
             SingleDigitCenteredTextBox sdc = (SingleDigitCenteredTextBox)sender;
-            //if (sdc.Text != "Gültige Zahl eingeben.")
-                setGameMessageBox(SudokuValidation.checkInput(GameArray, sender));
-            //else
-            //    SudokuValidation.clearField(GameArray, sender);
-          
+            SudokuValidation.checkInput(GameArray, sender);
         }
 
-        public static void setGameMessageBox(String Text)
+        public void setGameMessageBox(String Text)
         {
             GameMessageBox.Text = Text;
+        }
+
+        private void fillToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SudokuBoard.generateSmartSolutionRow(GameArray);
+
+            SudokuBoard.updatePlayingField(PlayingField, GameArray);
+        }
+
+        private void clearToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SudokuBoard.clearGameFieldArray(GameArray);
+            SudokuBoard.updatePlayingField(PlayingField, GameArray);
         }
     }
 }

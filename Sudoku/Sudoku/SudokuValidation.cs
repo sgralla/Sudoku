@@ -8,12 +8,15 @@ namespace Sudoku
 {
     class SudokuValidation
     {
+        
+
         public static String checkInput(int[,] GameField, object sender)
         {
             String Message;
             if (!InsertInput(GameField, sender))
             {
                 Message = ("Ungültige Zahl eingegeben.");
+                
                 SingleDigitCenteredTextBox sdc = (SingleDigitCenteredTextBox)sender;
                 sdc.Text = "";
             }
@@ -50,7 +53,7 @@ namespace Sudoku
             return false;
         }
 
-        private static byte[] getPosition(int[,] gameField, SingleDigitCenteredTextBox Input)
+        public static byte[] getPosition(int[,] gameField, SingleDigitCenteredTextBox Input)
         {
             byte[] Position = new byte[2];
             String InputName;
@@ -80,10 +83,10 @@ namespace Sudoku
         public static bool validateInput(int x, int y, int[,] GameField, int Input, bool checkRow, bool checkColumn, bool checkSquare)
         {
             bool valid = true;
-            int validcounter;
+            //int validcounter;
             
             // Empty SDC.Text will be set to 0
-            // which should always be allowed
+            // which is always allowed so no need to check
             if (Input != 0)
             {
                 // CheckRow
@@ -106,7 +109,7 @@ namespace Sudoku
                     //without validcounter
                     for (int i = 0; i < 9; i++)
                     {
-                        if (GameField[x, i] == Input)
+                        if (GameField[x, i] == Input && i != y)
                         {
                             valid = false;
                             // no need to check any further
@@ -137,7 +140,7 @@ namespace Sudoku
                     // without validcounter
                     for (int i = 0; i < 9; i++)
                     {
-                        if (GameField[i, y] == Input)
+                        if (GameField[i, y] == Input && i != x)
                         {
                             valid = false;
                             // no need to check any further
@@ -199,12 +202,17 @@ namespace Sudoku
                 for (int j = 0; j < 3; j++)
                 {
                     // = GameField[i + x0, j + y0];
-                    if (GameField[i + x0, j + y0] == Input)
+                    if (GameField[i + x0, j + y0] == Input && i != x && j != y)
                         return false;
                 }
             }
             //return SquareAsRow;
             return true;
+        }
+
+        private class MessageField
+        {
+            public string MF { get; private set; }
         }
     }
 }

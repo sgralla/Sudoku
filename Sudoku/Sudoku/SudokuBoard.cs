@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Sudoku
 {
@@ -146,6 +147,32 @@ namespace Sudoku
             }
         }
 
+        internal static void clearGameFieldArray(int[,] gameArray)
+        {
+            for (int i = 0; i < 9; i++)
+            {
+                for (int j = 0; j < 9; j++)
+                {
+                    gameArray[i, j] = 0;
+                }
+            }
+        }
+
+        internal static void updatePlayingField(GroupBox PlayingField, int[,] GameArray)
+        {
+            byte[] Position = new byte[2];
+            int GameArrayText;
+            foreach (SingleDigitCenteredTextBox sdc in PlayingField.Controls)
+            {
+                // if ()
+                Position = SudokuValidation.getPosition(GameArray, sdc);
+                GameArrayText = GameArray[Position[0], Position[1]];
+                //sdc.Text = Int32.ToString(GameArrayText, sdc.Text);
+                sdc.Text = GameArrayText.ToString();
+                sdc.SelectionAlignment = HorizontalAlignment.Center;
+            }
+        }
+
         public static void generateSolutionSquare(int[,] GameField)
         {
             int SquareNumber = 0;
@@ -247,8 +274,8 @@ namespace Sudoku
                 {
                     //if (GameField[i, j] == 0)
                     //  GameField[i,j] = getNumberForRow(GameField, i, j);
-                    //if (i == 3 && j ==1)
-                    //    Console.WriteLine("Break");
+                    //if (i == 3 && j ==5)
+                    //    Console.WriteLine();
 
                     // To Output array to console
                     if (GameField[i, j] == 0)
@@ -274,32 +301,34 @@ namespace Sudoku
 
             for (int i = 1; i <= 9; i++)
             {
-                CPos = 0;
-                //RPos = 0;
-                for (int j = y; j < 9; j++)
+                if (SudokuValidation.validateInput(x, y, GameField, i, true, true, true))
                 {
-                    // Does not work because already inserted values are not
-                    // considered in the checkFunction
-                    if (SudokuValidation.validateInput(x, j, GameField, i, true, true, true))
+                    CPos = 0;
+                    //RPos = 0;
+                    for (int j = y; j < 9; j++)
                     {
-                        CPos++;
-                        //CRNumber = i;
+                        // Does not work because already inserted values are not
+                        // considered in the checkFunction
+                        if (SudokuValidation.validateInput(x, j, GameField, i, true, true, true))
+                        {
+                            CPos++;
+                            //CRNumber = i;
+                        }
+
                     }
-                  
+                    if (CPos != 0 && ((RPos == 0) || (CPos <= RPos)))
+                    {
+                        RPos = CPos;
+                        RNumber = i;
+                        //if (RNumber == 1)
+                        //    return RNumber;
+                    }
                 }
-                if (CPos != 0 && ((RPos == 0) || (CPos <= RPos)))
-                { 
-                    RPos = CPos;
-                    RNumber = i;
-                    //if (RNumber == 1)
-                    //    return RNumber;
-                }
-
-
             }
             // Check if Input is valid for current Position else decrease Number;
-            while (!SudokuValidation.validateInput(x, y, GameField, RNumber, true, true, true))
-                --RNumber;
+            // Should be checked first
+            //while (!SudokuValidation.validateInput(x, y, GameField, RNumber, true, true, true))
+            //    --RNumber;
 
             return RNumber;
         }
