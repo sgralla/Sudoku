@@ -53,7 +53,18 @@ namespace Sudoku
             return false;
         }
 
-        public static byte[] getPosition(int[,] gameField, SingleDigitCenteredTextBox Input)
+        internal static int getNumberOfEmptyFields(int[,] GameArray)
+        {
+            int counter = 0;
+            foreach (int GFV in GameArray)
+            {
+                if (GFV == 0)
+                    ++counter;
+            }
+            return counter;
+        }
+
+        internal static byte[] getPosition(int[,] gameField, SingleDigitCenteredTextBox Input)
         {
             byte[] Position = new byte[2];
             String InputName;
@@ -83,7 +94,6 @@ namespace Sudoku
         public static bool validateInput(int x, int y, int[,] GameField, int Input, bool checkRow, bool checkColumn, bool checkSquare)
         {
             bool valid = true;
-            //int validcounter;
             
             // Empty SDC.Text will be set to 0
             // which is always allowed so no need to check
@@ -92,76 +102,19 @@ namespace Sudoku
                 // CheckRow
                 if (valid && checkRow)
                 {
-                    // with validcounter
-                    //validcounter = 0;
-                    //for (int i = 0; i < 9; i++)
-                    //{
-                    //    if (GameField[x, i] != Input)
-                    //    {
-                    //        ++validcounter;
-                    //        //no need to check any further
-                    //        break;
-                    //    }
-                    //}
-                    //if (validcounter < 9)
-                    //    valid = false;
-
-                    //without validcounter
-                    for (int i = 0; i < 9; i++)
-                    {
-                        if (GameField[x, i] == Input && i != y)
-                        {
-                            valid = false;
-                            // no need to check any further
-                            break;
-                        }
-                    }
+                    valid = checkRowFunction(GameField, x, y, Input);
                 }
 
 
                 // Check Column
                 if (valid && checkColumn)
                 {
-                    // with validcounter
-                    //validcounter = 0;
-                    //for (int i = 0; i < 9; i++)
-                    //{
-                    //    if (GameField[i, y] != Input)
-                    //    {
-                    //        //valid = false;
-                    //        // no need to check any further
-                    //        //break;
-                    //        ++validcounter;
-                    //    }
-                    //}
-                    //if (validcounter < 9)
-                    //    valid = false;
-
-                    // without validcounter
-                    for (int i = 0; i < 9; i++)
-                    {
-                        if (GameField[i, y] == Input && i != x)
-                        {
-                            valid = false;
-                            // no need to check any further
-                            break;
-                        }
-                    }
-
+                     valid = checkColumnFunction(GameField, x , y, Input);
                 }
                 
                 // Check square
                 if (valid && checkSquare)
                 {
-                    //int[] SquareAsRow = new int[9];
-                    //SquareAsRow = getSquareAsRow(GameField, x, y);
-
-                    ////for (int i = 0; i < 9; i++)
-                    ////{
-                    ////    if (SquareAsRow[i] == Input)
-                    ////        valid = false;
-                    ////}
-
                     //// just copied this and modified it a little bit
                     //// not sure how it works
                     //// or will be an improvement
@@ -173,28 +126,28 @@ namespace Sudoku
             return valid;
         }
 
-        private static int[] getSquareAsRow(int[,] GameField, int x, int y)
+        private static bool checkRowFunction(int[,] GameField, int x, int y, int Input)
         {
-            // Instead of creating an array to easyly check I should check the GameField directly
-            int[] SquareAsRow = new int[9];
-
-            int x0 = x - x % 3;
-            int y0 = y - y % 3;
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 9; i++)
             {
-                for (int j = 0; j < 3; j++)
-                {
-                    SquareAsRow[(i*3+j)] = GameField[i+x0, j+y0];
-                }
+                if (GameField[x, i] == Input && i != y)
+                    return false;
             }
-            return SquareAsRow;
+            return true;
+        }
+
+        private static bool checkColumnFunction(int [,] GameField, int x, int y, int Input)
+        {
+            for (int i = 0; i < 9; i++)
+            {
+                if (GameField[i, y] == Input && i != x)
+                    return false;
+            }
+            return true;
         }
 
         private static bool checkSquareFunction(int[,] GameField, int x, int y, int Input)
         {
-            // Instead of creating an array to easyly check I should check the GameField directly
-            //int[] SquareAsRow = new int[9];
-
             int x0 = x - x % 3;
             int y0 = y - y % 3;
             for (int i = 0; i < 3; i++)
@@ -202,7 +155,7 @@ namespace Sudoku
                 for (int j = 0; j < 3; j++)
                 {
                     // = GameField[i + x0, j + y0];
-                    if (GameField[i + x0, j + y0] == Input && i != x && j != y)
+                    if (GameField[i + x0, j + y0] == Input && (i + x0) != x && (j + y0) != y)
                         return false;
                 }
             }
@@ -210,9 +163,5 @@ namespace Sudoku
             return true;
         }
 
-        private class MessageField
-        {
-            public string MF { get; private set; }
-        }
     }
 }

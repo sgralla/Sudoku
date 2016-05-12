@@ -36,12 +36,21 @@ namespace Sudoku
             SudokuBoard.generateSmartSolutionRow(GameArray);
 
             SudokuBoard.updatePlayingField(PlayingField, GameArray);
+
+            int errorcounter = 0;
+
+            errorcounter = SudokuValidation.getNumberOfEmptyFields(GameArray);
+
+            setGameMessageBox("Spielfeld mit " + errorcounter + " Fehlern gefüllt.");
+                 
         }
 
         private void clearToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SudokuBoard.clearGameFieldArray(GameArray);
             SudokuBoard.updatePlayingField(PlayingField, GameArray);
+            //GameMessageBox.Text = "Spielfeld geleert.";
+            setGameMessageBox("Spielfeld geleert.");
         }
     }
 }
