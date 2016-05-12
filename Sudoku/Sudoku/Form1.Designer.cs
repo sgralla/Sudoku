@@ -33,9 +33,10 @@ namespace Sudoku
         {
             this.GameMessageBox = new System.Windows.Forms.TextBox();
             this.PlayingField = new System.Windows.Forms.GroupBox();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.Main_MenuStrip = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fillToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sdc25 = new SingleDigitCenteredTextBox();
             this.sdc11 = new SingleDigitCenteredTextBox();
             this.sdc99 = new SingleDigitCenteredTextBox();
@@ -117,9 +118,9 @@ namespace Sudoku
             this.sdc64 = new SingleDigitCenteredTextBox();
             this.sdc55 = new SingleDigitCenteredTextBox();
             this.sdc56 = new SingleDigitCenteredTextBox();
-            this.clearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PlayingField.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
+            this.Main_MenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // GameMessageBox
@@ -219,21 +220,22 @@ namespace Sudoku
             this.PlayingField.TabStop = false;
             this.PlayingField.Text = "Spielfeld";
             // 
-            // menuStrip1
+            // Main_MenuStrip
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Main_MenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(373, 24);
-            this.menuStrip1.TabIndex = 83;
-            this.menuStrip1.Text = "menuStrip1";
+            this.Main_MenuStrip.Location = new System.Drawing.Point(0, 0);
+            this.Main_MenuStrip.Name = "Main_MenuStrip";
+            this.Main_MenuStrip.Size = new System.Drawing.Size(374, 24);
+            this.Main_MenuStrip.TabIndex = 83;
+            this.Main_MenuStrip.Text = "menuStrip1";
             // 
             // menuToolStripMenuItem
             // 
             this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fillToolStripMenuItem,
-            this.clearToolStripMenuItem});
+            this.clearToolStripMenuItem,
+            this.exitToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
             this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.menuToolStripMenuItem.Text = "Menu";
@@ -241,9 +243,16 @@ namespace Sudoku
             // fillToolStripMenuItem
             // 
             this.fillToolStripMenuItem.Name = "fillToolStripMenuItem";
-            this.fillToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.fillToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
             this.fillToolStripMenuItem.Text = "Fill";
             this.fillToolStripMenuItem.Click += new System.EventHandler(this.fillToolStripMenuItem_Click);
+            // 
+            // clearToolStripMenuItem
+            // 
+            this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
+            this.clearToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
+            this.clearToolStripMenuItem.Text = "Clear";
+            this.clearToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
             // 
             // sdc25
             // 
@@ -1298,28 +1307,31 @@ namespace Sudoku
             this.sdc56.TabIndex = 41;
             this.sdc56.Text = "";
             // 
-            // clearToolStripMenuItem
+            // exitToolStripMenuItem
             // 
-            this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
-            this.clearToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.clearToolStripMenuItem.Text = "Clear";
-            this.clearToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.Exit_Programm);
             // 
             // GameField
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(373, 416);
+            this.ClientSize = new System.Drawing.Size(374, 416);
             this.Controls.Add(this.PlayingField);
             this.Controls.Add(this.GameMessageBox);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.Controls.Add(this.Main_MenuStrip);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MainMenuStrip = this.Main_MenuStrip;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "GameField";
             this.Text = "Sudoku";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.PlayingField.ResumeLayout(false);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.Main_MenuStrip.ResumeLayout(false);
+            this.Main_MenuStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1410,10 +1422,11 @@ namespace Sudoku
         private SingleDigitCenteredTextBox sdc17;
         private GroupBox PlayingField;
         private TextBox GameMessageBox;
-        private MenuStrip menuStrip1;
+        private MenuStrip Main_MenuStrip;
         private ToolStripMenuItem menuToolStripMenuItem;
         private ToolStripMenuItem fillToolStripMenuItem;
         private ToolStripMenuItem clearToolStripMenuItem;
+        private ToolStripMenuItem exitToolStripMenuItem;
     }
 }
 

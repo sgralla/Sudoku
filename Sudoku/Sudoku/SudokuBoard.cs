@@ -86,7 +86,7 @@ namespace Sudoku
                         }
 
                     }
-                    if (CPos != 0 && ((RPos == 0) || (CPos <= RPos)))
+                    if (CPos != 0 && ((RPos == 0) || (CPos < RPos))) // < niedrigste Zahl gewinnt | <= höchste Zahl gewinnt
                     {
                         RPos = CPos;
                         RNumber = i;

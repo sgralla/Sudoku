@@ -33,13 +33,19 @@ namespace Sudoku
 
         private void fillToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SudokuBoard.generateSmartSolutionRow(GameArray);
-
-            SudokuBoard.updatePlayingField(PlayingField, GameArray);
 
             int errorcounter = 0;
 
-            errorcounter = SudokuValidation.getNumberOfEmptyFields(GameArray);
+            //do
+            //{
+                SudokuBoard.generateSmartSolutionRow(GameArray);
+                errorcounter = SudokuValidation.getNumberOfEmptyFields(GameArray);
+            //    if (errorcounter != 0)
+            //        SudokuBoard.clearGameFieldArray(GameArray);
+            //} while (errorcounter != 0);
+
+            SudokuBoard.updatePlayingField(PlayingField, GameArray);
+
 
             setGameMessageBox("Spielfeld mit " + errorcounter + " Fehlern gefüllt.");
                  
@@ -51,6 +57,13 @@ namespace Sudoku
             SudokuBoard.updatePlayingField(PlayingField, GameArray);
             //GameMessageBox.Text = "Spielfeld geleert.";
             setGameMessageBox("Spielfeld geleert.");
+        }
+
+        private void Exit_Programm(object sender, EventArgs e)
+        {
+           if (MessageBox.Show("Exit application?", "Exit", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                // The user wants to exit the application. Close everything down.
+                Application.Exit();
         }
     }
 }
