@@ -33,10 +33,6 @@ namespace Sudoku
         {
             this.GameMessageBox = new System.Windows.Forms.TextBox();
             this.PlayingField = new System.Windows.Forms.GroupBox();
-            this.Main_MenuStrip = new System.Windows.Forms.MenuStrip();
-            this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fillToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sdc25 = new SingleDigitCenteredTextBox();
             this.sdc11 = new SingleDigitCenteredTextBox();
             this.sdc99 = new SingleDigitCenteredTextBox();
@@ -118,7 +114,14 @@ namespace Sudoku
             this.sdc64 = new SingleDigitCenteredTextBox();
             this.sdc55 = new SingleDigitCenteredTextBox();
             this.sdc56 = new SingleDigitCenteredTextBox();
+            this.Main_MenuStrip = new System.Windows.Forms.MenuStrip();
+            this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fillToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.iOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.writeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.IOcSVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PlayingField.SuspendLayout();
             this.Main_MenuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -219,40 +222,6 @@ namespace Sudoku
             this.PlayingField.TabIndex = 82;
             this.PlayingField.TabStop = false;
             this.PlayingField.Text = "Spielfeld";
-            // 
-            // Main_MenuStrip
-            // 
-            this.Main_MenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuToolStripMenuItem});
-            this.Main_MenuStrip.Location = new System.Drawing.Point(0, 0);
-            this.Main_MenuStrip.Name = "Main_MenuStrip";
-            this.Main_MenuStrip.Size = new System.Drawing.Size(374, 24);
-            this.Main_MenuStrip.TabIndex = 83;
-            this.Main_MenuStrip.Text = "menuStrip1";
-            // 
-            // menuToolStripMenuItem
-            // 
-            this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fillToolStripMenuItem,
-            this.clearToolStripMenuItem,
-            this.exitToolStripMenuItem});
-            this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
-            this.menuToolStripMenuItem.Text = "Menu";
-            // 
-            // fillToolStripMenuItem
-            // 
-            this.fillToolStripMenuItem.Name = "fillToolStripMenuItem";
-            this.fillToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
-            this.fillToolStripMenuItem.Text = "Fill";
-            this.fillToolStripMenuItem.Click += new System.EventHandler(this.fillToolStripMenuItem_Click);
-            // 
-            // clearToolStripMenuItem
-            // 
-            this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
-            this.clearToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
-            this.clearToolStripMenuItem.Text = "Clear";
-            this.clearToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
             // 
             // sdc25
             // 
@@ -1307,12 +1276,70 @@ namespace Sudoku
             this.sdc56.TabIndex = 41;
             this.sdc56.Text = "";
             // 
+            // Main_MenuStrip
+            // 
+            this.Main_MenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuToolStripMenuItem,
+            this.iOToolStripMenuItem});
+            this.Main_MenuStrip.Location = new System.Drawing.Point(0, 0);
+            this.Main_MenuStrip.Name = "Main_MenuStrip";
+            this.Main_MenuStrip.Size = new System.Drawing.Size(374, 24);
+            this.Main_MenuStrip.TabIndex = 83;
+            this.Main_MenuStrip.Text = "menuStrip1";
+            // 
+            // menuToolStripMenuItem
+            // 
+            this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fillToolStripMenuItem,
+            this.clearToolStripMenuItem,
+            this.exitToolStripMenuItem});
+            this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.menuToolStripMenuItem.Text = "Menu";
+            // 
+            // fillToolStripMenuItem
+            // 
+            this.fillToolStripMenuItem.Name = "fillToolStripMenuItem";
+            this.fillToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.fillToolStripMenuItem.Text = "Fill";
+            this.fillToolStripMenuItem.Click += new System.EventHandler(this.fillToolStripMenuItem_Click);
+            // 
+            // clearToolStripMenuItem
+            // 
+            this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
+            this.clearToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.clearToolStripMenuItem.Text = "Clear";
+            this.clearToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
+            // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.Exit_Programm);
+            // 
+            // iOToolStripMenuItem
+            // 
+            this.iOToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.writeToolStripMenuItem});
+            this.iOToolStripMenuItem.Name = "iOToolStripMenuItem";
+            this.iOToolStripMenuItem.Size = new System.Drawing.Size(31, 20);
+            this.iOToolStripMenuItem.Text = "IO";
+            // 
+            // writeToolStripMenuItem
+            // 
+            this.writeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.IOcSVToolStripMenuItem});
+            this.writeToolStripMenuItem.Name = "writeToolStripMenuItem";
+            this.writeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.writeToolStripMenuItem.Text = "Write";
+            // 
+            // cSVToolStripMenuItem
+            // 
+            this.IOcSVToolStripMenuItem.Name = "IOcSVToolStripMenuItem";
+            this.IOcSVToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.IOcSVToolStripMenuItem.Text = "CSV";
+            this.IOcSVToolStripMenuItem.Click += new System.EventHandler(this.IOcSVToolStripMenuItem_Click);
             // 
             // GameField
             // 
@@ -1427,6 +1454,9 @@ namespace Sudoku
         private ToolStripMenuItem fillToolStripMenuItem;
         private ToolStripMenuItem clearToolStripMenuItem;
         private ToolStripMenuItem exitToolStripMenuItem;
+        private ToolStripMenuItem iOToolStripMenuItem;
+        private ToolStripMenuItem writeToolStripMenuItem;
+        private ToolStripMenuItem IOcSVToolStripMenuItem;
     }
 }
 

@@ -8,11 +8,13 @@ namespace Sudoku
     {
         // Global variables
         static int[,] GameArray = new int[9, 9];
-        
+        static int[,,] GameArrayValid = new int[9, 9, 9];
+
 
         public GameField()
         {
             InitializeComponent();
+            SudokuValidation.initValid(GameArray, GameArrayValid);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -23,7 +25,8 @@ namespace Sudoku
         public static void sdc_Validating(object sender, CancelEventArgs e)
         {
             SingleDigitCenteredTextBox sdc = (SingleDigitCenteredTextBox)sender;
-            SudokuValidation.checkInput(GameArray, sender);
+           // SudokuValidation.checkInput(GameArray, sender);
+            SudokuValidation.updateValid(GameArray, GameArrayValid, sender);
         }
 
         public void setGameMessageBox(String Text)
@@ -64,6 +67,11 @@ namespace Sudoku
            if (MessageBox.Show("Exit application?", "Exit", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 // The user wants to exit the application. Close everything down.
                 Application.Exit();
+        }
+
+        private void IOcSVToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            InpOut.writeGameFieldToCSV(GameArray);
         }
     }
 }

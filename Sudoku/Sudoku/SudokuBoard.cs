@@ -79,12 +79,14 @@ namespace Sudoku
                     //RPos = 0;
                     for (int j = y; j < 9; j++)
                     {
-                        if (SudokuValidation.validateInput(x, j, GameField, i, true, true, true))
+                        for (int k = x; k < 9; ++k)
                         {
-                            CPos++;
-                            //CRNumber = i;
+                            if (SudokuValidation.validateInput(k, j, GameField, i, true, true, true))
+                            {
+                                CPos++;
+                                //CRNumber = i;
+                            }
                         }
-
                     }
                     if (CPos != 0 && ((RPos == 0) || (CPos < RPos))) // < niedrigste Zahl gewinnt | <= höchste Zahl gewinnt
                     {
