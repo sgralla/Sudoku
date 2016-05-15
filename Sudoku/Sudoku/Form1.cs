@@ -8,7 +8,7 @@ namespace Sudoku
     {
         // Global variables
         static int[,] GameArray = new int[9, 9];
-        static int[,,] GameArrayValid = new int[9, 9, 9];
+        static int[,,] GameArrayValid = new int[9, 9, 10];
 
 
         public GameField()
@@ -36,27 +36,18 @@ namespace Sudoku
 
         private void fillToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-            int errorcounter = 0;
-
-            //do
-            //{
-                SudokuBoard.generateSmartSolutionRow(GameArray);
-                errorcounter = SudokuValidation.getNumberOfEmptyFields(GameArray);
-            //    if (errorcounter != 0)
-            //        SudokuBoard.clearGameFieldArray(GameArray);
-            //} while (errorcounter != 0);
-
+            SudokuBoard.fillGameField(GameArray, GameArrayValid);
             SudokuBoard.updatePlayingField(PlayingField, GameArray);
 
 
-            setGameMessageBox("Spielfeld mit " + errorcounter + " Fehlern gefüllt.");
+            //setGameMessageBox("Spielfeld mit " + errorcounter + " Fehlern gefüllt.");
                  
         }
 
         private void clearToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SudokuBoard.clearGameFieldArray(GameArray);
+            SudokuValidation.initValid(GameArray, GameArrayValid);
             SudokuBoard.updatePlayingField(PlayingField, GameArray);
             //GameMessageBox.Text = "Spielfeld geleert.";
             setGameMessageBox("Spielfeld geleert.");

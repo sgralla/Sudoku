@@ -36,73 +36,42 @@ namespace Sudoku
             }
         }
 
-        public static void generateSmartSolutionRow(int[,] GameField)
+        internal static void fillGameField(int[,] GameField, int[,,] GameFieldValid)
         {
-            // To Output array to console
-            int solveNumber; // debug variable
+            //Random rnd = new Random();
+            int insertable = 2;
+            //bool filled = false;
 
-            for (int i = 0; i < 9; i++)
-            {
-                for (int j = 0; j < 9; j++)
+            while (insertable < 10)
+                for (int a = 0; a < 9; a++)
                 {
-                    //if (GameField[i, j] == 0)
-                    //  GameField[i,j] = getNumberForRow(GameField, i, j);
-                    //if (i == 3 && j ==5)
-                    //    Console.WriteLine();
-
-                    // To Output array to console
-                    if (GameField[i, j] == 0)
+                    for (int b = 0; b < 9; b++)
                     {
-                        solveNumber = getNumberForRow(GameField, i, j);
-                        GameField[i, j] = solveNumber;
-                        Console.Write(solveNumber + " ");
-                    }
-                    else
-                        Console.Write(GameField[i, j] + " ");
-                }
-                Console.WriteLine();
-            }
-        }
-    
-        private static int getNumberForRow(int[,] GameField, int x, int y)
-        {
-            int RNumber = 0;
-            int RPos = 0;
-            int CPos = 0;
-            //int CRNumber = 0;
-
-            for (int i = 1; i <= 9; i++)
-            {
-                if (SudokuValidation.validateInput(x, y, GameField, i, true, true, true))
-                {
-                    CPos = 0;
-                    //RPos = 0;
-                    for (int j = y; j < 9; j++)
-                    {
-                        for (int k = x; k < 9; ++k)
+                        if (GameField[a, b] == 0 && GameFieldValid[a, b, 9] == 1)
                         {
-                            if (SudokuValidation.validateInput(k, j, GameField, i, true, true, true))
+                            int insertval = 0; ;
+                            for (int c = 0; c < 9; c++)
                             {
-                                CPos++;
-                                //CRNumber = i;
+                                if (GameFieldValid[a, b, c] != 0)
+                                {
+                                    insertval = GameFieldValid[a, b, c];
+                                    insertable = 2;
+                                    break;
+                                }
                             }
+                            SudokuValidation.setGameFieldValid(GameFieldValid, GameField, a, b, insertval, false);
                         }
-                    }
-                    if (CPos != 0 && ((RPos == 0) || (CPos < RPos))) // < niedrigste Zahl gewinnt | <= höchste Zahl gewinnt
-                    {
-                        RPos = CPos;
-                        RNumber = i;
-                        //if (RNumber == 1)
-                        //    return RNumber;
+                        //else if (GameFieldValid[a, b, 9] == insertable)
+                        //{
+                        //    ArrayList AList = new ArrayList;
+                        //    AList += 
+                        //}
+                        else
+                            ++insertable;
                     }
                 }
-            }
-            // Check if Input is valid for current Position else decrease Number;
-            // Should be checked first
-            //while (!SudokuValidation.validateInput(x, y, GameField, RNumber, true, true, true))
-            //    --RNumber;
+            
 
-            return RNumber;
         }
     }
 }
