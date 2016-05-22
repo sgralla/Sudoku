@@ -50,7 +50,7 @@ namespace Sudoku
                     GameField[x, y] = 0;
                     Input.Text = "";
                 }
-
+         
             }
             else
             {
@@ -62,6 +62,8 @@ namespace Sudoku
                         Input.Text = "";
                     }
                 }
+                else
+                    Input.Text = "";
             }
 
         }
@@ -106,7 +108,7 @@ namespace Sudoku
                         updateCounter(GameFieldValid, i+x0, j+y0);
                     }
                 }
-                
+
                 return true;
             }
             return false;
