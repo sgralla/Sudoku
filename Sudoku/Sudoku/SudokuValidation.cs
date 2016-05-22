@@ -56,6 +56,8 @@ namespace Sudoku
                         Input.Text = "";
                     }
                 }
+                else
+                    Input.Text = "";
             }
 
         }
@@ -93,8 +95,8 @@ namespace Sudoku
                     }
                 }
                 //return Squ
-                if (remove)
-                    GameField[x, y] = 0;
+                //if (remove)
+                //    GameField[x, y] = 0;
                 return true;
             }
             return false;
