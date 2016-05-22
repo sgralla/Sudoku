@@ -24,9 +24,14 @@ namespace Sudoku
 
         public static void sdc_Validating(object sender, CancelEventArgs e)
         {
-            SingleDigitCenteredTextBox sdc = (SingleDigitCenteredTextBox)sender;
+            //SingleDigitCenteredTextBox sdc = (SingleDigitCenteredTextBox)sender;
            // SudokuValidation.checkInput(GameArray, sender);
             SudokuValidation.updateValid(GameArray, GameArrayValid, sender);
+        }
+        
+        internal static void sdc_Enter(object sender, CancelEventArgs e)
+        {
+            Sudoku.SudokuBoard.showValidEntries(GameArrayValid, GameArray, sender, ValidEntries);
         }
 
         public void setGameMessageBox(String Text)

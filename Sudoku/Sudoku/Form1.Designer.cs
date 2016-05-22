@@ -33,6 +33,14 @@ namespace Sudoku
         {
             this.GameMessageBox = new System.Windows.Forms.TextBox();
             this.PlayingField = new System.Windows.Forms.GroupBox();
+            this.Main_MenuStrip = new System.Windows.Forms.MenuStrip();
+            this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fillToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.iOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.writeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.IOcSVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sdc25 = new SingleDigitCenteredTextBox();
             this.sdc11 = new SingleDigitCenteredTextBox();
             this.sdc99 = new SingleDigitCenteredTextBox();
@@ -114,16 +122,19 @@ namespace Sudoku
             this.sdc64 = new SingleDigitCenteredTextBox();
             this.sdc55 = new SingleDigitCenteredTextBox();
             this.sdc56 = new SingleDigitCenteredTextBox();
-            this.Main_MenuStrip = new System.Windows.Forms.MenuStrip();
-            this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fillToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.iOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.writeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.IOcSVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sdcV9 = new SingleDigitCenteredTextBox();
+            this.sdcV8 = new SingleDigitCenteredTextBox();
+            this.sdcV7 = new SingleDigitCenteredTextBox();
+            this.sdcV6 = new SingleDigitCenteredTextBox();
+            this.sdcV5 = new SingleDigitCenteredTextBox();
+            this.sdcV4 = new SingleDigitCenteredTextBox();
+            this.sdcV3 = new SingleDigitCenteredTextBox();
+            this.sdcV2 = new SingleDigitCenteredTextBox();
+            this.sdcV1 = new SingleDigitCenteredTextBox();
+            this.ValidEntries = new System.Windows.Forms.GroupBox();
             this.PlayingField.SuspendLayout();
             this.Main_MenuStrip.SuspendLayout();
+            this.ValidEntries.SuspendLayout();
             this.SuspendLayout();
             // 
             // GameMessageBox
@@ -222,6 +233,71 @@ namespace Sudoku
             this.PlayingField.TabIndex = 82;
             this.PlayingField.TabStop = false;
             this.PlayingField.Text = "Spielfeld";
+            // 
+            // Main_MenuStrip
+            // 
+            this.Main_MenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuToolStripMenuItem,
+            this.iOToolStripMenuItem});
+            this.Main_MenuStrip.Location = new System.Drawing.Point(0, 0);
+            this.Main_MenuStrip.Name = "Main_MenuStrip";
+            this.Main_MenuStrip.Size = new System.Drawing.Size(425, 24);
+            this.Main_MenuStrip.TabIndex = 83;
+            this.Main_MenuStrip.Text = "menuStrip1";
+            // 
+            // menuToolStripMenuItem
+            // 
+            this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fillToolStripMenuItem,
+            this.clearToolStripMenuItem,
+            this.exitToolStripMenuItem});
+            this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.menuToolStripMenuItem.Text = "Menu";
+            // 
+            // fillToolStripMenuItem
+            // 
+            this.fillToolStripMenuItem.Name = "fillToolStripMenuItem";
+            this.fillToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
+            this.fillToolStripMenuItem.Text = "Fill";
+            this.fillToolStripMenuItem.Click += new System.EventHandler(this.fillToolStripMenuItem_Click);
+            // 
+            // clearToolStripMenuItem
+            // 
+            this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
+            this.clearToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
+            this.clearToolStripMenuItem.Text = "Clear";
+            this.clearToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.Exit_Programm);
+            // 
+            // iOToolStripMenuItem
+            // 
+            this.iOToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.writeToolStripMenuItem});
+            this.iOToolStripMenuItem.Name = "iOToolStripMenuItem";
+            this.iOToolStripMenuItem.Size = new System.Drawing.Size(31, 20);
+            this.iOToolStripMenuItem.Text = "IO";
+            // 
+            // writeToolStripMenuItem
+            // 
+            this.writeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.IOcSVToolStripMenuItem});
+            this.writeToolStripMenuItem.Name = "writeToolStripMenuItem";
+            this.writeToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
+            this.writeToolStripMenuItem.Text = "Write";
+            // 
+            // IOcSVToolStripMenuItem
+            // 
+            this.IOcSVToolStripMenuItem.Name = "IOcSVToolStripMenuItem";
+            this.IOcSVToolStripMenuItem.Size = new System.Drawing.Size(95, 22);
+            this.IOcSVToolStripMenuItem.Text = "CSV";
+            this.IOcSVToolStripMenuItem.Click += new System.EventHandler(this.IOcSVToolStripMenuItem_Click);
             // 
             // sdc25
             // 
@@ -1276,76 +1352,155 @@ namespace Sudoku
             this.sdc56.TabIndex = 41;
             this.sdc56.Text = "";
             // 
-            // Main_MenuStrip
+            // sdcV9
             // 
-            this.Main_MenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuToolStripMenuItem,
-            this.iOToolStripMenuItem});
-            this.Main_MenuStrip.Location = new System.Drawing.Point(0, 0);
-            this.Main_MenuStrip.Name = "Main_MenuStrip";
-            this.Main_MenuStrip.Size = new System.Drawing.Size(374, 24);
-            this.Main_MenuStrip.TabIndex = 83;
-            this.Main_MenuStrip.Text = "menuStrip1";
+            this.sdcV9.AllowSpace = false;
+            this.sdcV9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdcV9.Location = new System.Drawing.Point(8, 319);
+            this.sdcV9.MaxLength = 1;
+            this.sdcV9.Multiline = false;
+            this.sdcV9.Name = "sdcV9";
+            this.sdcV9.ReadOnly = true;
+            this.sdcV9.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdcV9.Size = new System.Drawing.Size(30, 30);
+            this.sdcV9.TabIndex = 89;
+            this.sdcV9.Text = "";
             // 
-            // menuToolStripMenuItem
+            // sdcV8
             // 
-            this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fillToolStripMenuItem,
-            this.clearToolStripMenuItem,
-            this.exitToolStripMenuItem});
-            this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
-            this.menuToolStripMenuItem.Text = "Menu";
+            this.sdcV8.AllowSpace = false;
+            this.sdcV8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdcV8.Location = new System.Drawing.Point(8, 283);
+            this.sdcV8.MaxLength = 1;
+            this.sdcV8.Multiline = false;
+            this.sdcV8.Name = "sdcV8";
+            this.sdcV8.ReadOnly = true;
+            this.sdcV8.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdcV8.Size = new System.Drawing.Size(30, 30);
+            this.sdcV8.TabIndex = 88;
+            this.sdcV8.Text = "";
             // 
-            // fillToolStripMenuItem
+            // sdcV7
             // 
-            this.fillToolStripMenuItem.Name = "fillToolStripMenuItem";
-            this.fillToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.fillToolStripMenuItem.Text = "Fill";
-            this.fillToolStripMenuItem.Click += new System.EventHandler(this.fillToolStripMenuItem_Click);
+            this.sdcV7.AllowSpace = false;
+            this.sdcV7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdcV7.Location = new System.Drawing.Point(8, 247);
+            this.sdcV7.MaxLength = 1;
+            this.sdcV7.Multiline = false;
+            this.sdcV7.Name = "sdcV7";
+            this.sdcV7.ReadOnly = true;
+            this.sdcV7.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdcV7.Size = new System.Drawing.Size(30, 30);
+            this.sdcV7.TabIndex = 87;
+            this.sdcV7.Text = "";
             // 
-            // clearToolStripMenuItem
+            // sdcV6
             // 
-            this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
-            this.clearToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.clearToolStripMenuItem.Text = "Clear";
-            this.clearToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
+            this.sdcV6.AllowSpace = false;
+            this.sdcV6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdcV6.Location = new System.Drawing.Point(8, 203);
+            this.sdcV6.MaxLength = 1;
+            this.sdcV6.Multiline = false;
+            this.sdcV6.Name = "sdcV6";
+            this.sdcV6.ReadOnly = true;
+            this.sdcV6.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdcV6.Size = new System.Drawing.Size(30, 30);
+            this.sdcV6.TabIndex = 86;
+            this.sdcV6.Text = "";
             // 
-            // exitToolStripMenuItem
+            // sdcV5
             // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.Exit_Programm);
+            this.sdcV5.AllowSpace = false;
+            this.sdcV5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdcV5.Location = new System.Drawing.Point(8, 167);
+            this.sdcV5.MaxLength = 1;
+            this.sdcV5.Multiline = false;
+            this.sdcV5.Name = "sdcV5";
+            this.sdcV5.ReadOnly = true;
+            this.sdcV5.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdcV5.Size = new System.Drawing.Size(30, 30);
+            this.sdcV5.TabIndex = 85;
+            this.sdcV5.Text = "";
             // 
-            // iOToolStripMenuItem
+            // sdcV4
             // 
-            this.iOToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.writeToolStripMenuItem});
-            this.iOToolStripMenuItem.Name = "iOToolStripMenuItem";
-            this.iOToolStripMenuItem.Size = new System.Drawing.Size(31, 20);
-            this.iOToolStripMenuItem.Text = "IO";
+            this.sdcV4.AllowSpace = false;
+            this.sdcV4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdcV4.Location = new System.Drawing.Point(8, 131);
+            this.sdcV4.MaxLength = 1;
+            this.sdcV4.Multiline = false;
+            this.sdcV4.Name = "sdcV4";
+            this.sdcV4.ReadOnly = true;
+            this.sdcV4.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdcV4.Size = new System.Drawing.Size(30, 30);
+            this.sdcV4.TabIndex = 84;
+            this.sdcV4.Text = "";
             // 
-            // writeToolStripMenuItem
+            // sdcV3
             // 
-            this.writeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.IOcSVToolStripMenuItem});
-            this.writeToolStripMenuItem.Name = "writeToolStripMenuItem";
-            this.writeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.writeToolStripMenuItem.Text = "Write";
+            this.sdcV3.AllowSpace = false;
+            this.sdcV3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdcV3.Location = new System.Drawing.Point(8, 87);
+            this.sdcV3.MaxLength = 1;
+            this.sdcV3.Multiline = false;
+            this.sdcV3.Name = "sdcV3";
+            this.sdcV3.ReadOnly = true;
+            this.sdcV3.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdcV3.Size = new System.Drawing.Size(30, 30);
+            this.sdcV3.TabIndex = 83;
+            this.sdcV3.Text = "";
             // 
-            // cSVToolStripMenuItem
+            // sdcV2
             // 
-            this.IOcSVToolStripMenuItem.Name = "IOcSVToolStripMenuItem";
-            this.IOcSVToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.IOcSVToolStripMenuItem.Text = "CSV";
-            this.IOcSVToolStripMenuItem.Click += new System.EventHandler(this.IOcSVToolStripMenuItem_Click);
+            this.sdcV2.AllowSpace = false;
+            this.sdcV2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdcV2.Location = new System.Drawing.Point(8, 51);
+            this.sdcV2.MaxLength = 1;
+            this.sdcV2.Multiline = false;
+            this.sdcV2.Name = "sdcV2";
+            this.sdcV2.ReadOnly = true;
+            this.sdcV2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdcV2.Size = new System.Drawing.Size(30, 30);
+            this.sdcV2.TabIndex = 82;
+            this.sdcV2.Text = "";
+            // 
+            // sdcV1
+            // 
+            this.sdcV1.AllowSpace = false;
+            this.sdcV1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdcV1.Location = new System.Drawing.Point(8, 15);
+            this.sdcV1.MaxLength = 1;
+            this.sdcV1.Multiline = false;
+            this.sdcV1.Name = "sdcV1";
+            this.sdcV1.ReadOnly = true;
+            this.sdcV1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.sdcV1.Size = new System.Drawing.Size(30, 30);
+            this.sdcV1.TabIndex = 81;
+            this.sdcV1.Text = "";
+            // 
+            // ValidEntries
+            // 
+            this.ValidEntries.Controls.Add(this.sdcV2);
+            this.ValidEntries.Controls.Add(this.sdcV9);
+            this.ValidEntries.Controls.Add(this.sdcV3);
+            this.ValidEntries.Controls.Add(this.sdcV4);
+            this.ValidEntries.Controls.Add(this.sdcV8);
+            this.ValidEntries.Controls.Add(this.sdcV5);
+            this.ValidEntries.Controls.Add(this.sdcV1);
+            this.ValidEntries.Controls.Add(this.sdcV7);
+            this.ValidEntries.Controls.Add(this.sdcV6);
+            this.ValidEntries.Location = new System.Drawing.Point(368, 27);
+            this.ValidEntries.Name = "ValidEntries";
+            this.ValidEntries.Size = new System.Drawing.Size(44, 357);
+            this.ValidEntries.TabIndex = 90;
+            this.ValidEntries.TabStop = false;
             // 
             // GameField
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(374, 416);
+            this.ClientSize = new System.Drawing.Size(425, 416);
+            this.Controls.Add(this.ValidEntries);
             this.Controls.Add(this.PlayingField);
             this.Controls.Add(this.GameMessageBox);
             this.Controls.Add(this.Main_MenuStrip);
@@ -1359,6 +1514,7 @@ namespace Sudoku
             this.PlayingField.ResumeLayout(false);
             this.Main_MenuStrip.ResumeLayout(false);
             this.Main_MenuStrip.PerformLayout();
+            this.ValidEntries.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1457,6 +1613,16 @@ namespace Sudoku
         private ToolStripMenuItem iOToolStripMenuItem;
         private ToolStripMenuItem writeToolStripMenuItem;
         private ToolStripMenuItem IOcSVToolStripMenuItem;
+        private SingleDigitCenteredTextBox sdcV9;
+        private SingleDigitCenteredTextBox sdcV8;
+        private SingleDigitCenteredTextBox sdcV7;
+        private SingleDigitCenteredTextBox sdcV6;
+        private SingleDigitCenteredTextBox sdcV5;
+        private SingleDigitCenteredTextBox sdcV4;
+        private SingleDigitCenteredTextBox sdcV3;
+        private SingleDigitCenteredTextBox sdcV2;
+        private SingleDigitCenteredTextBox sdcV1;
+        private GroupBox ValidEntries;
     }
 }
 

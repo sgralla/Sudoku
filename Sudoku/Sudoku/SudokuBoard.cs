@@ -27,11 +27,9 @@ namespace Sudoku
             int GameArrayText;
             foreach (SingleDigitCenteredTextBox sdc in PlayingField.Controls)
             {
-                // if ()
                 Position = SudokuValidation.getPosition(GameArray, sdc);
                 GameArrayText = GameArray[Position[0], Position[1]];
-                //sdc.Text = Int32.ToString(GameArrayText, sdc.Text);
-                sdc.Text = GameArrayText.ToString();
+                sdc.Text = GameArrayText != 0 ? GameArrayText.ToString() : "";
                 sdc.SelectionAlignment = HorizontalAlignment.Center;
             }
         }
@@ -39,44 +37,57 @@ namespace Sudoku
         internal static void fillGameField(int[,] GameField, int[,,] GameFieldValid)
         {
             //Random rnd = new Random();
-            int insertable = 2;
-            bool bbreak;
+            int insertable = 1;
+            bool validEntryFound = false;
+            int noValues = 0;
             //bool filled = false;
 
-            while (insertable < 10)
+            while (insertable < 10 && !validEntryFound)
                 for (int a = 0; a < 9; a++)
                 {
                     bbreak = false;
                     for (int b = 0; b < 9; b++)
                     {
-                        if (GameField[a, b] == 0 && GameFieldValid[a, b, 9] == 1)
+                        if (GameField[a, b] == 0 && GameFieldValid[a, b, 9] == 0)
+                            noValues++;
+                        else if (GameField[a, b] == 0 && GameFieldValid[a, b, 9] == insertable)
                         {
-                            int insertval = 0; ;
+                            int insertval = 0;
+
                             for (int c = 0; c < 9; c++)
                             {
                                 if (GameFieldValid[a, b, c] != 0)
                                 {
                                     insertval = GameFieldValid[a, b, c];
                                     insertable = 2;
+                                    validEntryFound = true;
                                     break;
                                 }
                             }
                             SudokuValidation.setGameFieldValid(GameFieldValid, GameField, a, b, insertval, false);
-                            GameField[a, b] = insertval;
-                            bbreak = true;
-                            break;
+                            if (validEntryFound) break;
                         }
-                        //else if (GameFieldValid[a, b, 9] == insertable)
-                        //{
-                        //    ArrayList AList = new ArrayList;
-                        //    AList += 
-                        //}
-                        //else
-                        //    ++insertable;
+                        else if (a == 8 && b == 8)
+                            insertable++;
                     }
-                    if (bbreak) break;
+                    if (validEntryFound) break;
+                    }
+            
+
                 }
             
+        internal static void showValidEntries(int[,,] GameFieldValid, int[,] GameArray, object sender, GroupBox ValidEntries)
+        {
+            byte[] Position = new byte[2];
+            SingleDigitCenteredTextBox currentSDC = (SingleDigitCenteredTextBox)sender;
+            Position = SudokuValidation.getPosition(GameArray, currentSDC);
+            int x;
+
+            foreach (SingleDigitCenteredTextBox V in ValidEntries.Controls)
+            {
+                x = Byte.Parse(V.Name.Substring(3, 1));
+                V.Text = GameFieldValid[Position[0], Position[1], x].ToString();
+            }
 
         }
     }
