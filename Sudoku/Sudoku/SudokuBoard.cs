@@ -40,11 +40,13 @@ namespace Sudoku
         {
             //Random rnd = new Random();
             int insertable = 2;
+            bool bbreak;
             //bool filled = false;
 
             while (insertable < 10)
                 for (int a = 0; a < 9; a++)
                 {
+                    bbreak = false;
                     for (int b = 0; b < 9; b++)
                     {
                         if (GameField[a, b] == 0 && GameFieldValid[a, b, 9] == 1)
@@ -60,15 +62,19 @@ namespace Sudoku
                                 }
                             }
                             SudokuValidation.setGameFieldValid(GameFieldValid, GameField, a, b, insertval, false);
+                            GameField[a, b] = insertval;
+                            bbreak = true;
+                            break;
                         }
                         //else if (GameFieldValid[a, b, 9] == insertable)
                         //{
                         //    ArrayList AList = new ArrayList;
                         //    AList += 
                         //}
-                        else
-                            ++insertable;
+                        //else
+                        //    ++insertable;
                     }
+                    if (bbreak) break;
                 }
             
 
