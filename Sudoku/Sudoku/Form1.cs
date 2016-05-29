@@ -8,7 +8,8 @@ namespace Sudoku
     {
         // Global variables
         static int[,] GameArray = new int[9, 9];
-        static int[,,] GameArrayValid = new int[9, 9, 10];
+        static int[,,] GameArrayValid = new int[9, 9, 9];
+
 
         public GameField()
         {
@@ -18,20 +19,15 @@ namespace Sudoku
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         public static void sdc_Validating(object sender, CancelEventArgs e)
         {
-            //SingleDigitCenteredTextBox sdc = (SingleDigitCenteredTextBox)sender;
-            // SudokuValidation.checkInput(GameArray, sender);
+            SingleDigitCenteredTextBox sdc = (SingleDigitCenteredTextBox)sender;
+           // SudokuValidation.checkInput(GameArray, sender);
             SudokuValidation.updateValid(GameArray, GameArrayValid, sender);
         }
-
-        //internal void sdc_Enter(object sender, CancelEventArgs e)
-        //{
-        //    Sudoku.SudokuBoard.showValidEntries(GameArrayValid, GameArray, sender, ValidEntries);
-        //}
 
         public void setGameMessageBox(String Text)
         {
@@ -40,18 +36,27 @@ namespace Sudoku
 
         private void fillToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SudokuBoard.fillGameField(GameArray, GameArrayValid);
+
+            int errorcounter = 0;
+
+            //do
+            //{
+                SudokuBoard.generateSmartSolutionRow(GameArray);
+                errorcounter = SudokuValidation.getNumberOfEmptyFields(GameArray);
+            //    if (errorcounter != 0)
+            //        SudokuBoard.clearGameFieldArray(GameArray);
+            //} while (errorcounter != 0);
+
             SudokuBoard.updatePlayingField(PlayingField, GameArray);
 
 
-            //setGameMessageBox("Spielfeld mit " + errorcounter + " Fehlern gefüllt.");
-
+            setGameMessageBox("Spielfeld mit " + errorcounter + " Fehlern gefüllt.");
+                 
         }
 
         private void clearToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SudokuBoard.clearGameFieldArray(GameArray);
-            SudokuValidation.initValid(GameArray, GameArrayValid);
             SudokuBoard.updatePlayingField(PlayingField, GameArray);
             //GameMessageBox.Text = "Spielfeld geleert.";
             setGameMessageBox("Spielfeld geleert.");
@@ -59,7 +64,8 @@ namespace Sudoku
 
         private void Exit_Programm(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Exit application?", "Exit", MessageBoxButtons.YesNo) == DialogResult.Yes)
+           if (MessageBox.Show("Exit application?", "Exit", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                // The user wants to exit the application. Close everything down.
                 Application.Exit();
         }
 
@@ -67,22 +73,5 @@ namespace Sudoku
         {
             InpOut.writeGameFieldToCSV(GameArray);
         }
-
-        public object sender
-        {
-            set
-            {
-                this.sender = value;
-            }
-            get
-            {
-                return this.sender;
-            }
-        }
-
-        //public static void sdc_Enter(object sender, EventArgs e)
-        //{
-        //    SudokuBoard.showValidEntries(GameArrayValid, GameArray, sender, ValidEntries);
-        //}
-    }      
+    }
 }

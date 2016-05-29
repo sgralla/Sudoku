@@ -27,67 +27,82 @@ namespace Sudoku
             int GameArrayText;
             foreach (SingleDigitCenteredTextBox sdc in PlayingField.Controls)
             {
+                // if ()
                 Position = SudokuValidation.getPosition(GameArray, sdc);
                 GameArrayText = GameArray[Position[0], Position[1]];
-                sdc.Text = GameArrayText != 0 ? GameArrayText.ToString() : "";
+                //sdc.Text = Int32.ToString(GameArrayText, sdc.Text);
+                sdc.Text = GameArrayText.ToString();
                 sdc.SelectionAlignment = HorizontalAlignment.Center;
             }
         }
 
-        internal static void fillGameField(int[,] GameField, int[,,] GameFieldValid)
+        public static void generateSmartSolutionRow(int[,] GameField)
         {
-            //Random rnd = new Random();
-            int insertable = 1;
-            bool validEntryFound = false;
-            int noValues = 0;
-            //bool filled = false;
+            // To Output array to console
+            int solveNumber; // debug variable
 
-            while (insertable < 10 && !validEntryFound)
-                for (int a = 0; a < 9; a++)
-                {
-                    for (int b = 0; b < 9; b++)
-                    {
-                        if (GameField[a, b] == 0 && GameFieldValid[a, b, 9] == 0)
-                            noValues++;
-                        else if (GameField[a, b] == 0 && GameFieldValid[a, b, 9] == insertable)
-                        {
-                            int insertval = 0;
-
-                            for (int c = 0; c < 9; c++)
-                            {
-                                if (GameFieldValid[a, b, c] != 0)
-                                {
-                                    insertval = GameFieldValid[a, b, c];
-                                    insertable = 2;
-                                    validEntryFound = true;
-                                    break;
-                                }
-                            }
-                            SudokuValidation.setGameFieldValid(GameFieldValid, GameField, a, b, insertval, false);
-                            if (validEntryFound) break;
-                        }
-                        else if (a == 8 && b == 8)
-                            insertable++;
-                    }
-                    if (validEntryFound) break;
-                    }
-            
-
-                }
-            
-        public static void showValidEntries(int[,,] GameFieldValid, int[,] GameArray, object sender, GroupBox ValidEntries)
-        {
-            byte[] Position = new byte[2];
-            SingleDigitCenteredTextBox currentSDC = (SingleDigitCenteredTextBox)sender;
-            Position = SudokuValidation.getPosition(GameArray, currentSDC);
-            int x;
-
-            foreach (SingleDigitCenteredTextBox V in ValidEntries.Controls)
+            for (int i = 0; i < 9; i++)
             {
-                x = Byte.Parse(V.Name.Substring(3, 1));
-                V.Text = GameFieldValid[Position[0], Position[1], x].ToString();
-            }
+                for (int j = 0; j < 9; j++)
+                {
+                    //if (GameField[i, j] == 0)
+                    //  GameField[i,j] = getNumberForRow(GameField, i, j);
+                    //if (i == 3 && j ==5)
+                    //    Console.WriteLine();
 
+                    // To Output array to console
+                    if (GameField[i, j] == 0)
+                    {
+                        solveNumber = getNumberForRow(GameField, i, j);
+                        GameField[i, j] = solveNumber;
+                        Console.Write(solveNumber + " ");
+                    }
+                    else
+                        Console.Write(GameField[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+        }
+    
+        private static int getNumberForRow(int[,] GameField, int x, int y)
+        {
+            int RNumber = 0;
+            int RPos = 0;
+            int CPos = 0;
+            //int CRNumber = 0;
+
+            for (int i = 1; i <= 9; i++)
+            {
+                if (SudokuValidation.validateInput(x, y, GameField, i, true, true, true))
+                {
+                    CPos = 0;
+                    //RPos = 0;
+                    for (int j = y; j < 9; j++)
+                    {
+                        for (int k = x; k < 9; ++k)
+                        {
+                            if (SudokuValidation.validateInput(k, j, GameField, i, true, true, true))
+                            {
+                                CPos++;
+                                //CRNumber = i;
+                            }
+                        }
+                    }
+                    if (CPos != 0 && ((RPos == 0) || (CPos < RPos))) // < niedrigste Zahl gewinnt | <= höchste Zahl gewinnt
+                    {
+                        RPos = CPos;
+                        RNumber = i;
+                        //if (RNumber == 1)
+                        //    return RNumber;
+                    }
+                }
+            }
+            // Check if Input is valid for current Position else decrease Number;
+            // Should be checked first
+            //while (!SudokuValidation.validateInput(x, y, GameField, RNumber, true, true, true))
+            //    --RNumber;
+
+            return RNumber;
         }
     }
 }
