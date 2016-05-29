@@ -45,7 +45,6 @@ namespace Sudoku
             while (insertable < 10 && !validEntryFound)
                 for (int a = 0; a < 9; a++)
                 {
-                    bbreak = false;
                     for (int b = 0; b < 9; b++)
                     {
                         if (GameField[a, b] == 0 && GameFieldValid[a, b, 9] == 0)
@@ -76,7 +75,7 @@ namespace Sudoku
 
                 }
             
-        internal static void showValidEntries(int[,,] GameFieldValid, int[,] GameArray, object sender, GroupBox ValidEntries)
+        public static void showValidEntries(int[,,] GameFieldValid, int[,] GameArray, object sender, GroupBox ValidEntries)
         {
             byte[] Position = new byte[2];
             SingleDigitCenteredTextBox currentSDC = (SingleDigitCenteredTextBox)sender;

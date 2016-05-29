@@ -10,7 +10,6 @@ namespace Sudoku
         static int[,] GameArray = new int[9, 9];
         static int[,,] GameArrayValid = new int[9, 9, 10];
 
-
         public GameField()
         {
             InitializeComponent();
@@ -19,20 +18,20 @@ namespace Sudoku
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           
+
         }
 
         public static void sdc_Validating(object sender, CancelEventArgs e)
         {
             //SingleDigitCenteredTextBox sdc = (SingleDigitCenteredTextBox)sender;
-           // SudokuValidation.checkInput(GameArray, sender);
+            // SudokuValidation.checkInput(GameArray, sender);
             SudokuValidation.updateValid(GameArray, GameArrayValid, sender);
         }
-        
-        internal static void sdc_Enter(object sender, CancelEventArgs e)
-        {
-            Sudoku.SudokuBoard.showValidEntries(GameArrayValid, GameArray, sender, ValidEntries);
-        }
+
+        //internal void sdc_Enter(object sender, CancelEventArgs e)
+        //{
+        //    Sudoku.SudokuBoard.showValidEntries(GameArrayValid, GameArray, sender, ValidEntries);
+        //}
 
         public void setGameMessageBox(String Text)
         {
@@ -46,7 +45,7 @@ namespace Sudoku
 
 
             //setGameMessageBox("Spielfeld mit " + errorcounter + " Fehlern gefüllt.");
-                 
+
         }
 
         private void clearToolStripMenuItem_Click(object sender, EventArgs e)
@@ -60,8 +59,7 @@ namespace Sudoku
 
         private void Exit_Programm(object sender, EventArgs e)
         {
-           if (MessageBox.Show("Exit application?", "Exit", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                // The user wants to exit the application. Close everything down.
+            if (MessageBox.Show("Exit application?", "Exit", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 Application.Exit();
         }
 
@@ -69,5 +67,22 @@ namespace Sudoku
         {
             InpOut.writeGameFieldToCSV(GameArray);
         }
-    }
+
+        public object sender
+        {
+            set
+            {
+                this.sender = value;
+            }
+            get
+            {
+                return this.sender;
+            }
+        }
+
+        //public static void sdc_Enter(object sender, EventArgs e)
+        //{
+        //    SudokuBoard.showValidEntries(GameArrayValid, GameArray, sender, ValidEntries);
+        //}
+    }      
 }

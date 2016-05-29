@@ -57,7 +57,8 @@ public class SingleDigitCenteredTextBox : RichTextBox
         SelectAll();
         SelectionAlignment = HorizontalAlignment.Center;
         Validating += new System.ComponentModel.CancelEventHandler(Sudoku.GameField.sdc_Validating);
-        Enter += new System.ComponentModel.CancelEventHandler(Sudoku.GameField.sdc_Enter);
+        //Enter += new System.ComponentModel.EventhanderList(Sudoku.GameField.sdc_Enter);
+
     }
 
     public int IntValue
